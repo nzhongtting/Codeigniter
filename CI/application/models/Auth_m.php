@@ -13,7 +13,7 @@ class Auth_m extends CI_Model
 
     function select_master_id_info($id_v, $count_data)
     {
-        $sql = "SELECT * FROM admin_user_tab where aduser_id = '" . $id_v . "' " ;
+        $sql = "SELECT * FROM Tbl_admin_user where id_v = '" . $id_v . "' " ;
         $query = $this->db->query($sql);
 
         if ($count_data == 'count')

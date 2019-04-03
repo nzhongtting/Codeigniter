@@ -4,7 +4,7 @@
     <div class="pull-right hidden-xs">
         <b>Version</b> 0.5.0
     </div>
-    <strong>Copyright &copy; 2019 &nbsp;&nbsp; <a href="http://www.esangschool.com">Admin esangschool.com</a>.</strong> All rights
+    <strong>Copyright &copy; 2019 &nbsp;&nbsp; <a href="http://www.hongtting.com">Admin hongtting.com</a>.</strong> All rights
     reserved.
 </footer>
 

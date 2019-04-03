@@ -57,7 +57,7 @@
 
     define('LOGIN_NEED_MASTER_URL', '/CI/Login/');
     define('LOGIN_NEED_URL', '/CI/Login/');
-
+    define('HOSTING_MAIN_ROOT', '/home/testuser01/www/CI/');
 
 /*
  *---------------------------------------------------------------

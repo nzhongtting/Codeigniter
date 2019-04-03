@@ -25,7 +25,7 @@ class Login extends MY_Controller
         }
         else
         {
-            $board_list_link = "http://www.esangschool.com/" ;
+            $board_list_link = "http://www.hongtting.com/" ;
             replace($board_list_link);
         }
 	}
@@ -72,8 +72,8 @@ class Login extends MY_Controller
             if ($result_count == 1) {
 
                 $result = $this->Auth_m->select_master_id_info($tmp_id, '');
-                $mb_pw = $result->aduser_pw ;
-                $mb_name = $result->aduser_power;
+                $mb_pw = $result->pw_v ;
+                $mb_name = $result->name_v;
 
                 if ($mb_pw == $tmp_pw)
                 {

@@ -1,5 +1,6 @@
 <?php
 $login_id = $this->session->userdata('sess_id');
+$login_name = $this->session->userdata('sess_name');
 ?>
 <!DOCTYPE html>
 <html>
@@ -46,7 +47,7 @@ $login_id = $this->session->userdata('sess_id');
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <a href="Temp" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>E</b>.A</span>
             <!-- logo for regular state and mobile devices -->
@@ -68,7 +69,7 @@ $login_id = $this->session->userdata('sess_id');
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="/CI/AdminLTE/dist/img/admin_160_160_2.jpg" class="user-image" alt="User Image">
-                            <span class="hidden-xs">관리자</span>
+                            <span class="hidden-xs"><?=$login_name?></span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
@@ -76,7 +77,7 @@ $login_id = $this->session->userdata('sess_id');
                                 <img src="/CI/AdminLTE/dist/img/admin_160_160_2.jpg" class="img-circle" alt="User Image">
 
                                 <p>
-                                    관리자(<?=$login_id?>) - 이상스쿨
+                                    <?=$login_name?>(<?=$login_id?>) - 이상스쿨
                                     <small>Member since April. 2019</small>
                                 </p>
                             </li>
