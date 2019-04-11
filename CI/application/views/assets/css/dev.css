@@ -1,0 +1,82 @@
+
+table.sns-login button{display:block;width:100%;height:38px;line-height:38px;font-size:11px;color:#6c7580;font-weight:700;background-color:#fff;}
+table.sns-login button i{display:inline-block;margin-right:3px;font-size:0;vertical-align:text-bottom;}
+table.sns-login button.btn-google i{width:50px;height:16px;background:url('../images/sub/login_google.jpg') no-repeat left top;background-size:100%;}
+table.sns-login button.btn-naver i{width:50px;height:12px;margin-top:3px;background:url('../images/sub/login_naver.jpg') no-repeat left top;background-size:100%;}
+table.sns-login button.btn-kakao i{width:42px;height:14px;background:url('../images/sub/login_kakao.jpg') no-repeat left top;background-size:100%;}
+table.sns-login button.btn-facebook i{width:55px;height:13px;background:url('../images/sub/login_facebook.jpg') no-repeat left top;background-size:100%;}
+
+
+table.sns-login div.btn-naver{display:block;width:100%;height:52px;line-height:52px;font-size:15px;color:#6c7580;font-weight:700;border:1px solid #d7d7d7;background-color:#fff;}
+table.sns-login div i{display:inline-block;margin-right:3px;font-size:0;vertical-align:text-top;}
+table.sns-login div.btn-naver i{width:58px;height:11px;margin-top:3px;background:url('../images/sub/login_naver.jpg') no-repeat left top;}
+.sms_auth_ok, .sms_auth_no{display:none;}
+/*.sns-login{display:none;}*/
+
+.textbook .text .box .info span{padding-left:6px;}
+.textbook .text .box .info span:before{content:'|';padding-right:6px;}
+.textbook .text .box .info span:first-child{padding-left:0px;}
+.textbook .text .box .info span:first-child:before{content:'';padding-right:0px;}
+
+.top-img p.ps span a{margin-left:10px;}
+header div.my-wrap div.my-top ul.link-wrap li{width:33.3%}
+
+.none_notice{display:none;line-height:100px;font-size:11px;text-align:center;}
+.none_notice.active{display:block;}
+
+div.lecture .video.init::after {content:"";position:absolute;width:60px;height:60px;left:50%;top:50%;transform:translate(-50%, -50%);background:url('../images/sub/icon_play.png') no-repeat left top;background-size:100%;}
+div.teacher .video{position:relative;}
+div.teacher .video.init::after {content:"";position:absolute;width:60px;height:60px;left:50%;top:50%;transform:translate(-50%, -50%);background:url('../images/sub/icon_play.png') no-repeat left top;background-size:100%;}
+.review-slick .play_btn{position:relative;}
+.review-slick .play_btn::after{
+	content:"";
+	position:absolute;
+	width:60px;height:60px;left:50%;top:50%;
+	margin-left:0px;
+	margin-top:-15px;
+	transform:translate(-50%, -50%);
+	background:url('../images/sub/icon_play.png') no-repeat left top;
+	background-size:100%;
+}
+
+div.coupon div.cp span.due.used, div.coupon div.cp span.due.expired2 {
+    font-size: 10px;
+    background: #303030;
+}
+div.coupon div.cp span.due.expired2::before{
+    content: "사용기간전";
+}
+div.board-list.event div.list.info p.img::before {
+    content: "안내";
+    background: #ec1e79;
+}
+
+p.modify-btn a::before {
+    content: "I";
+    display: inline-block;
+    margin: 0 5px;
+    font-family: "dotum";
+    color: #777;
+    font-size: 10px;
+}
+p.modify-btn a:first-child::before {
+    
+}
+div.popup div.cont {
+max-height: 80vh;
+}
+div.btn-wrap a{
+    margin-left: 2%;
+	display:block;
+	width: 49%;
+	float: left;
+}
+div.btn-wrap a:first-child{
+    margin-left: 0px;
+}
+div.btn-wrap a.is_study_1 {
+    margin-left: 0px;
+	width: 100%;
+
+}
+.lectureDetail .lecture_view_list .level_info_txt{min-height:19px;}

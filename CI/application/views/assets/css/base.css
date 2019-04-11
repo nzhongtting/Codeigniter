@@ -1,0 +1,32 @@
+body {margin:0;padding:0;background-color:#fff;width:100%;height:100%;font-family:'Noto Sans KR', 'Noto Sans', 'Nanum Gothic', 'Open Sans', 'Arial', sans-serif; }
+hr {display:none;}
+img,fieldset {border:0 none; vertical-align:top;}
+dl,ul,ol,li {list-style:none;}
+h1,h2,h3,h4,h5,dl,dt,dd,ul,li,ol,th,td,p,blockquote,form,fieldset,legend {margin:0;padding:0;}
+table {border-collapse:collapse; width:100%; table-layout:fixed;}
+a:link, a:visited {text-decoration:none;color:#333;} a:link:hover, a:active {text-decoration:none;}
+a:-webkit-any-link {color:#333;}
+input,select,textarea {font-size:100%; font-family:'Noto Sans KR', 'Noto Sans', 'Nanum Gothic', 'Open Sans', 'Arial', sans-serif; vertical-align:middle; font-weight:300;}
+textarea {resize:none; padding:15px; border:1px solid #c3c3c3;}
+body,th,td,input,button {font-size:12px; font-family:'Noto Sans KR', 'Noto Sans', 'Nanum Gothic', 'Open Sans', 'Arial', sans-serif; /*line-height:1.5;*/color:#333; font-weight:300;}
+h1,h2,h3,h4,h5,dl,dt,dd,ul,li,ol,th,td,p,blockquote,form,fieldset,legend,textarea,div {letter-spacing:0; word-wrap:break-word;}
+@media screen and (-webkit-min-device-pixel-ratio:0){h1,h2,h3,h4,h5,dl,dt,dd,ul,li,ol,th,td,p,blockquote,form,fieldset,legend,textarea,div {word-wrap: break-word;}}
+caption {display:none;}
+input, textarea, button {line-height: 1.5; vertical-align:middle;}
+input.type-image {border:0 none; padding:0; margin:0;}
+a {vertical-align:middle; text-decoration:none; word-wrap: break-word; cursor:pointer; font-family:'Noto Sans KR', 'Noto Sans', 'Nanum Gothic', 'Open Sans', 'Noto Sans Japanese', 'Noto Sans SC', 'Arial', sans-serif; font-weight:300;}
+pre {white-space:pre-wrap !important; margin:0 !important; padding:0 !important;}
+button {cursor:pointer; border:none;}
+
+em {font-style:normal}
+button {padding:0; background-color:inherit}
+input {padding:0 10px; margin:0; border:0; box-sizing:border-box;}
+input[type="submit"], input[type="reset"], input[type="button"] {cursor:pointer; border:0; background-color:inherit}
+select {height:35px; padding:0 15px; color:#7d7d7d; font-size:12px; font-weight:400; border-color:#a6a6a6; background:#fff;}
+select,input[type="button"],input[type="submit"],label {cursor:pointer;}
+input:focus, button:focus{outline: none; }
+
+.fll{float:left;}
+.flr{float:right;}
+.clearfix:after{content:'';display:block;clear:both;}
+.ellipsis{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}

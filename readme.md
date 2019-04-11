@@ -1,3 +1,5 @@
+LEVEL TEST
+
 CodeIgniter + AdminLte + Mysql
 
 
@@ -11,13 +13,95 @@ create database test_db
 grant all privileges on test_db.* to 'testuser'@'localhost';
 
 
-CREATE TABLE `Tbl_admin_user` (
-  `n_key` int(11) NOT NULL AUTO_INCREMENT,
-  `id_v` varchar(20) NOT NULL DEFAULT '',
-  `pw_v` varchar(20) NOT NULL DEFAULT 'Y',
-  `name_v` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`n_key`)
-) ENGINE=MyISAM CHARSET=utf8
+mysql> desc Tbl_admin_user ;
++--------+-------------+------+-----+---------+----------------+
+| Field  | Type        | Null | Key | Default | Extra          |
++--------+-------------+------+-----+---------+----------------+
+| n_key  | int(11)     | NO   | PRI | NULL    | auto_increment |
+| id_v   | varchar(20) | NO   |     |         |                |
+| pw_v   | varchar(20) | NO   |     | Y       |                |
+| name_v | varchar(30) | NO   |     |         |                |
++--------+-------------+------+-----+---------+----------------+
+
+mysql> Tbl_customer_info
++---------+-------------+------+-----+---------+----------------+
+| Field   | Type        | Null | Key | Default | Extra          |
++---------+-------------+------+-----+---------+----------------+
+| c_idx   | int(11)     | NO   | PRI | NULL    | auto_increment |
+| date_in | varchar(20) | NO   |     |         |                |
+| c_name  | varchar(20) | NO   |     |         |                |
+| mphone  | varchar(30) | NO   |     |         |                |
+| result  | char(2)     | NO   |     |         |                |
+| g_idx   | varchar(11) | NO   |     |         |                |
++---------+-------------+------+-----+---------+----------------+
+
+mysql> desc Tbl_level_temporary ;
++----------+-------------+------+-----+---------+----------------+
+| Field    | Type        | Null | Key | Default | Extra          |
++----------+-------------+------+-----+---------+----------------+
+| t_idx    | int(11)     | NO   | PRI | NULL    | auto_increment |
+| date_in  | varchar(20) | NO   |     |         |                |
+| c_idx    | varchar(11) | NO   |     |         |                |
+| increase | int(10)     | YES  |     | NULL    |                |
++----------+-------------+------+-----+---------+----------------+
+
+mysql> desc Tbl_leveltest_result ;
++--------------+-------------+------+-----+---------+----------------+
+| Field        | Type        | Null | Key | Default | Extra          |
++--------------+-------------+------+-----+---------+----------------+
+| r_idx        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| c_idx        | varchar(11) | NO   |     |         |                |
+| b_idx        | varchar(11) | NO   |     |         |                |
+| b_result_val | varchar(10) | NO   |     |         |                |
+| g_idx        | varchar(11) | NO   |     |         |                |
++--------------+-------------+------+-----+---------+----------------+
+
+mysql> desc Tbl_pro_ans ;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| n_ans      | int(11)      | NO   | PRI | NULL    | auto_increment |
+| pro_n_auto | int(11)      | NO   | MUL | NULL    |                |
+| group_v    | tinyint(4)   | NO   | MUL | NULL    |                |
+| ans_num_v  | tinyint(4)   | NO   |     | NULL    |                |
+| ans_str    | varchar(100) | NO   |     |         |                |
+| next_q     | int(11)      | NO   |     | NULL    |                |
+| n_result   | int(11)      | NO   |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+
+mysql> desc Tbl_pro_group ;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| group_v     | int(11)      | NO   | PRI | NULL    | auto_increment |
+| group_title | varchar(100) | NO   |     |         |                |
++-------------+--------------+------+-----+---------+----------------+
+
+mysql> desc Tbl_pro_result ;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| n_result   | int(11)      | NO   | PRI | NULL    | auto_increment |
+| group_v    | tinyint(4)   | NO   | MUL | NULL    |                |
+| title_v    | varchar(100) | NO   |     |         |                |
+| msg_v      | text         | NO   |     | NULL    |                |
+| img_1      | varchar(100) | NO   |     |         |                |
+| img_1_link | varchar(200) | NO   |     |         |                |
+| img_2      | varchar(100) | NO   |     |         |                |
+| img_2_link | varchar(200) | NO   |     |         |                |
+| level_key  | char(2)      | NO   |     |         |                |
++------------+--------------+------+-----+---------+----------------+
+
+mysql> desc Tbl_problem ;
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| n_auto       | int(11)      | NO   | PRI | NULL    | auto_increment |
+| group_v      | tinyint(4)   | NO   | MUL | NULL    |                |
+| num_v        | tinyint(4)   | NO   |     | NULL    |                |
+| question_str | varchar(200) | NO   |     |         |                |
++--------------+--------------+------+-----+---------+----------------+
+
 
 Remove "index.php"  ----
 1) create file /CI/.htaccess 

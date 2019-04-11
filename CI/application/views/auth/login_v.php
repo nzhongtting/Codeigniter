@@ -32,7 +32,7 @@
 
 <div class="login-box">
     <div class="login-logo">
-        <a href="http://www.esangschool.com/"><b>E.Sanag</b> School</a>
+        <a href="https://www.google.co.kr/"><b>H.</b> School</a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">

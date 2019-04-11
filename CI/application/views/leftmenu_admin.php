@@ -40,12 +40,12 @@ $login_name = $this->session->userdata('sess_name');
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="<?=$cate['cate02']=='0'?"active ":""?>"><a href="Levellist"><i class="fa fa-circle-o"></i> 결과 목록</a></li>
-                    <li class="<?=$cate['cate02']=='1'?"active ":""?>"><a href="Temp"><i class="fa fa-circle-o"></i> 문제 은행</a></li>
+                    <li class="<?=$cate['cate02']=='0'?"active ":""?>"><a href="/CI/Levellist"><i class="fa fa-circle-o"></i> 결과 목록</a></li>
+                    <li class="<?=$cate['cate02']=='1'?"active ":""?>"><a href="/CI/Problem_set"><i class="fa fa-circle-o"></i> 문제 은행</a></li>
                 </ul>
             </li>
 
-            <li class="<?=$cate['cate01']=='just_main'?"active ":""?>"><a href="Temp"><i class="fa fa-circle-o text-red"></i> <span>Initial page</span></a></li>
+            <li class="<?=$cate['cate01']=='just_main'?"active ":""?>"><a href="/CI/Temp"><i class="fa fa-circle-o text-red"></i> <span>Initial page</span></a></li>
 
             <!-- 추후 이용 가능 : 2019.04.02 by shhong
                         <li class="treeview">

@@ -13,9 +13,11 @@ class MY_Controller extends CI_Controller {
 
     public function access_ip_view_ok_check() {
         $access_now_ip = getenv("REMOTE_ADDR") ;
+
         if (
 			($access_now_ip == "192.168.0.129") ||
-            ($access_now_ip == "182.208.80.99")
+            ($access_now_ip == "182.208.80.99") ||
+            ($access_now_ip == "192.168.0.63")
         ) {
             return "ok" ;
         } else {

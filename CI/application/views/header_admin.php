@@ -7,7 +7,7 @@ $login_name = $this->session->userdata('sess_name');
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>E Sang School</title>
+    <title>School</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -41,17 +41,18 @@ $login_name = $this->session->userdata('sess_name');
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="Temp" class="logo">
+        <a href="/CI/Temp" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>E</b>.A</span>
+            <span class="logo-mini"><b>S</b>.A</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>이상스쿨</b> Admin</span>
+            <span class="logo-lg"><b>School</b> Admin</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
@@ -77,7 +78,7 @@ $login_name = $this->session->userdata('sess_name');
                                 <img src="/CI/AdminLTE/dist/img/admin_160_160_2.jpg" class="img-circle" alt="User Image">
 
                                 <p>
-                                    <?=$login_name?>(<?=$login_id?>) - 이상스쿨
+                                    <?=$login_name?>(<?=$login_id?>) - School
                                     <small>Member since April. 2019</small>
                                 </p>
                             </li>

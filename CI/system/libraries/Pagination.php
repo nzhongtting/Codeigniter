@@ -144,7 +144,7 @@ class CI_Pagination {
 	 *
 	 * @var	int
 	 */
-	protected $uri_segment = 0;
+	protected $uri_segment = 6; // 현재 페이지 번호 위치 찾아내기 - pagination  라이브러리 통한 uri 이용시 적용됨   by shhong
 
 	/**
 	 * Full tag open

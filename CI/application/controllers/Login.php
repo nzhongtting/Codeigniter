@@ -25,7 +25,7 @@ class Login extends MY_Controller
         }
         else
         {
-            $board_list_link = "http://www.hongtting.com/" ;
+            $board_list_link = "https://www.google.co.kr/" ;
             replace($board_list_link);
         }
 	}
