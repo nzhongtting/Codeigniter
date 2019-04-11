@@ -12,7 +12,7 @@ create database test_db
 
 grant all privileges on test_db.* to 'testuser'@'localhost';
 
-
+\'
 mysql> desc Tbl_admin_user ;
 +--------+-------------+------+-----+---------+----------------+
 | Field  | Type        | Null | Key | Default | Extra          |
@@ -101,7 +101,7 @@ mysql> desc Tbl_problem ;
 | num_v        | tinyint(4)   | NO   |     | NULL    |                |
 | question_str | varchar(200) | NO   |     |         |                |
 +--------------+--------------+------+-----+---------+----------------+
-
+\'
 
 Remove "index.php"  ----
 1) create file /CI/.htaccess 
