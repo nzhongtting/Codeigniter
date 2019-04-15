@@ -291,6 +291,16 @@ class Problem_set extends MY_Controller {
         $data['group_info'] = $this->Problem_m->select_pro_group_one($group_v) ;
         $data['list'] = $this->Problem_m->select_problem_list($group_v) ;
 
+        foreach ($data['list'] as $lt)
+        {
+            log_message('DEBUG', '#### CHK : Problem_set/problem_edit  $lt->n_auto : '.$lt->n_auto.' - by shhong');
+            $result_cnt = $this->Problem_m->chk_question_state($lt->n_auto);
+            $lt->resultcnt = $result_cnt ;
+
+            $sum_cnt = $this->Problem_m->chk_question_count($lt->n_auto);
+            $lt->sum_cnt = $sum_cnt ;
+        }
+
         $data['result_list'] = $this->Problem_m->select_pro_result_list($group_v) ;
 
         $this->load->view('leveltest/problem_list_v', $data);
@@ -400,6 +410,17 @@ class Problem_set extends MY_Controller {
         $group_v = $tmp_d->group_v ;    //  result_one_info
         $data['group_info'] = $this->Problem_m->select_pro_group_one($group_v) ;
         $data['list'] = $this->Problem_m->select_problem_list($group_v) ;
+
+        foreach ($data['list'] as $lt)
+        {
+            // log_message('DEBUG', '#### CHK : Problem_set/problem_edit  $lt->n_auto : '.$lt->n_auto.' - by shhong');
+            $result_cnt = $this->Problem_m->chk_question_state($lt->n_auto);
+            $lt->resultcnt = $result_cnt ;
+
+            $sum_cnt = $this->Problem_m->chk_question_count($lt->n_auto);
+            $lt->sum_cnt = $sum_cnt ;
+        }
+
         $data['result_list'] = $this->Problem_m->select_pro_result_list($group_v) ;
 
         $data['ans_list'] = $this->Problem_m->select_problem_ans_one_problem_list($n_auto) ;

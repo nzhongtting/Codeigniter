@@ -35,14 +35,28 @@
 
         $link_problem = "/CI/Problem_set/problem_edit/" . $lt->n_auto ;
 
-        if ($n_auto != $lt->n_auto) {
+        if ($n_auto != $lt->n_auto)
+        {
             $opt_question .= "<option value='". $lt->n_auto ."' style=\"background-color: #FFCC66;\">". $lt->num_v . ":" . $lt->question_str ."</option>\n" ;
+        }
+
+        if( $lt->resultcnt < 2 )
+        {
+            $error_state_icon = "<span class='label label-danger'>ERROR</span>";
+        }
+        else if( $lt->sum_cnt < 2 )
+        {
+            $error_state_icon = "<span class='label label-danger'>ERROR</span>";
+        }
+        else
+        {
+            $error_state_icon = "";
         }
 
         ?>
         <tr>
             <td><?php echo $lt->num_v ; ?></td>
-            <td><a href="<?php echo $link_problem ; ?>"><?php echo $lt->question_str ; ?></a></td>
+            <td><?=$error_state_icon?> <a href="<?php echo $link_problem ; ?>"><?php echo $lt->question_str ; ?></a></td>
         </tr>
         <?php
 

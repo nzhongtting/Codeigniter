@@ -368,16 +368,21 @@ $group_title = $group_info->group_title ;
                                 </form>
 
 <script>
-<?php
-for ($i=0; $i < sizeof($aa_next_q); $i++) {
-    ?>
-    try {
-        $('#<?php echo $aa_next_q_id[$i] ; ?> > option[value=<?php echo $aa_next_q[$i] ; ?>]').attr('selected', 'true');
-        $('#<?php echo $aa_result_id[$i] ; ?> > option[value=<?php echo $aa_result[$i] ; ?>]').attr('selected', 'true');
-    } catch (e) {}
     <?php
-}
-?>
+    if( !empty($aa_next_q) )
+    {
+        for ($i = 0; $i < sizeof($aa_next_q); $i++)
+        {
+        ?>
+        try {
+            $('#<?php echo $aa_next_q_id[$i]; ?> > option[value=<?php echo $aa_next_q[$i]; ?>]').attr('selected', 'true');
+            $('#<?php echo $aa_result_id[$i]; ?> > option[value=<?php echo $aa_result[$i]; ?>]').attr('selected', 'true');
+        } catch (e) {
+        }
+        <?php
+        }
+    }
+    ?>
 </script>
 
                 </div><!--  2 //-->

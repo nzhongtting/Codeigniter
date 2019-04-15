@@ -273,4 +273,22 @@ class Problem_m extends CI_Model
         $this->db->delete('Tbl_pro_ans', $Where_array);
         return true ;
     }
+
+    function chk_question_count($question_idx)
+    {
+        $sql1 = " select count(*) cnt from Tbl_pro_ans A , Tbl_problem B  where pro_n_auto='$question_idx' and A.n_result ='0' and B.n_auto = A.next_q"  ;
+        $query1 = $this->db->query($sql1);
+        $result1 = $query1->row();
+        // log_message('DEBUG', '#### CHK : chk_question_count  $sql1 : '.$sql1.' - by shhong');
+
+        $sql2 = "select count(*) cnt from Tbl_pro_ans A , Tbl_pro_result B where A.pro_n_auto ='$question_idx' and A.next_q = '0' and B.n_result= A.n_result" ;
+        $query2 = $this->db->query($sql2);
+        $result2 = $query2->row();
+        // log_message('DEBUG', '#### CHK : chk_question_count  $sql2 : '.$sql2.' - by shhong');
+
+        $sum_cnt = $result1->cnt + $result2->cnt ;
+        log_message('DEBUG', '#### CHK : chk_question_count  $sum_cnt : '.$sum_cnt.' - by shhong');
+        return $sum_cnt;
+    }
+
 }
