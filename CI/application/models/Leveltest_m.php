@@ -82,6 +82,7 @@ class Leveltest_m extends CI_Model
             ,'mphone'	=> $param['mphone']
             ,'result'   => $param['result']
             ,'g_idx'    => $param['group_v']
+            ,'chk_pc_m' => $param['chk_pc_m']
         );
         $this->db->insert('Tbl_customer_info', $insert_array);
 

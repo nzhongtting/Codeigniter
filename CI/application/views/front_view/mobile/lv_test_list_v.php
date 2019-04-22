@@ -139,17 +139,3 @@ echo form_open( '' , $attributes );
         <!-- 질문 영역 종료 -->
     </div>
 </div>
-<!-- container end -->
-<!--<script>
-    $('.question_list .btn').on('click', function(){
-        var radioCkd = $(this).parents('.question_list').find('input:radio:checked');
-        console.log(radioCkd.length);
-        if(radioCkd.length < 1){
-            alert('다음 질문에 해당 되는 것을 선택해주세요.');
-            event.preventDefault();
-        }else if (radioCkd.length = 1){
-            var index = $(this).parents('.question_list').index();
-            $(".question_list").eq(index).addClass("active").siblings().removeClass("active");
-        }
-    });
-</script>-->

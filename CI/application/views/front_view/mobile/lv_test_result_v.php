@@ -21,6 +21,25 @@ if( $lv_test_result )
     $r_img_url  = $lv_test_result->img_2_link;
     $level_key  = $lv_test_result->level_key;
 }
+
+// [시작] PC or Mobile 구분 추가 by shhong 20190422
+function isMobile() {
+    return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+}
+
+if(isMobile())
+{
+    $chk_pc_m = "mo";
+    $iframe_h = "170";
+    $btn_top = "";
+}
+else
+{
+    $chk_pc_m = "pc";
+    $iframe_h = "270";
+    $btn_top = " style='margin-top: 90px;';";
+}
+// [종료] PC or Mobile 구분 추가 by shhong 20190422
 ?>
 
 <script>
@@ -108,7 +127,8 @@ if( $lv_test_result )
 <div class="container level_result">
     <div class="lvResult_area">
         <div class="play_wrap">
-            <iframe width="100%" height="170" src="<?php echo $video_url; ?>" frameborder="0" allow="accelerometer;encrypted-media; gyroscope; picture-in-picture"></iframe>
+            <!-- PC or mobile height $iframe_h // [추가] PC or Mobile 구분 추가 by shhong 20190422 -->
+            <iframe width="100%" height="<?=$iframe_h?>" src="<?php echo $video_url; ?>" frameborder="0" allow="accelerometer;encrypted-media; gyroscope; picture-in-picture"></iframe>
             <span class="now_view"><span><em class="level_txt">[입문]</em> 강의 맛보기 시청중</span></span>
         </div>
         <div class="lvResult">
@@ -123,6 +143,7 @@ if( $lv_test_result )
                 <input type="hidden" name="mem_answer" value='<?php echo $mem_answer; ?>' />    <!-- 사용자 답변 -->
                 <input type="hidden" name="n_result" value='<?php echo $n_result; ?>' />        <!-- 사용자 결과 키 -->
                 <input type="hidden" name="level_key" value='<?php echo $level_key; ?>' />      <!-- 결과 레벨 키 -->
+                <input type="hidden" name="chk_pc_m" value='<?=$chk_pc_m?>' />      <!-- 모바일, PC 여부 // [추가] PC or Mobile 구분 추가 by shhong 20190422 -->
 
                 <label>
                     <span class="input_txt">이름</span>
@@ -151,7 +172,8 @@ if( $lv_test_result )
                     <input type="checkbox" id="terms_check02" value="" name="chk_2" ><label for="terms_check02"><I class="ckd_icon"></I><span>SMS 수신 동의</span></label>
                 </li>
             </ul>
-            <div class="btn_area">
+            <!-- PC or mobile height $btn_top // [추가] PC or Mobile 구분 추가 by shhong 20190422 -->
+            <div class="btn_area" <?=$btn_top?> >
                 <a href="javascript:fn_save_test_result();" class="btn compBtn">
                     <img src="/CI/application/views/assets/images/sub/icon_lvResult_btn.gif">
                 </a>

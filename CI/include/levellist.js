@@ -8,6 +8,7 @@ function search_list()
     var uri_segment_4   = "0";
     var uri_segment_5   = "0";
     var uri_segment_5_1 = "";
+    var uri_segment_5_2 = "";
 
     if( $('#c_name').val() !='' )
     {
@@ -30,7 +31,21 @@ function search_list()
         uri_segment_5_1 = "|"+uri_segment_5_1 ;
     }
 
-    _URL_ = "/CI/Levellist/index/"+uri_segment_3+"/"+uri_segment_4+"/"+uri_segment_5+uri_segment_5_1;
+    if( $("#chk_pc_m option:selected").val() !='' )
+    {
+        uri_segment_5_2 = $("#chk_pc_m option:selected").val() ;
+        if( uri_segment_5_1 )
+        {
+            uri_segment_5_2 = "|"+uri_segment_5_2 ;
+        }
+        else
+        {
+            uri_segment_5_2 = "||"+uri_segment_5_2 ;
+        }
+
+    }
+
+    _URL_ = "/CI/Levellist/index/"+uri_segment_3+"/"+uri_segment_4+"/"+uri_segment_5+uri_segment_5_1+uri_segment_5_2;
 
     form.action = _URL_ ;
     form.submit();

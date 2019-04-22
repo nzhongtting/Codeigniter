@@ -70,8 +70,14 @@ class Levellist_m extends CI_Model
                 $wherequery .= " and g_idx = '".$cutword[1]."' ";
             }
 
+            if(!empty($cutword[2]))
+            {
+                $wherequery .= " and chk_pc_m = '".$cutword[2]."' ";
+            }
+
         }
 
+        log_message('DEBUG', '#### PWD : Levellist_m/searchtype_query $wherequery : '.$wherequery.'  - by shhong');
         return $wherequery ;
     }
 

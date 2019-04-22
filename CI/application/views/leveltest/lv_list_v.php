@@ -2,7 +2,7 @@
 include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
 ?>
 
-<script src="/CI/include/levellist.js?v=2019040437" type="text/javascript"></script>
+<script src="/CI/include/levellist.js?v=2019040440" type="text/javascript"></script>
 
 <!--- main start  Div 에 작성 //-->
 <!------------------------------------------------------------------------------------------------------------------------------ //-->
@@ -76,6 +76,14 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
                                                 </select>
 
                                             </th>
+                                            <th>
+                                                <!-- PC or mobile select // [추가] PC or Mobile 구분 추가 by shhong 20190422 -->
+                                                <select class="form-control" id="chk_pc_m" name="chk_pc_m" >
+                                                    <option value=""> All ( PC or Mobile ) </option>
+                                                    <option value="pc">PC</option>
+                                                    <option value="mo">Mobile</option>
+                                                </select>
+                                            </th>
 
                                             <th></th>
                                             <th>
@@ -91,7 +99,8 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
                                         <th width="25%" style="text-align: center">Title</th>
                                         <th width="10%" style="text-align: center">이름</th>
                                         <th width="20%" style="text-align: center">연락처</th>
-                                        <th width="20%" style="text-align: center">결과</th>
+                                        <th width="10%" style="text-align: center">결과</th>
+                                        <th width="10%" style="text-align: center">&nbsp;</th>
                                         <th width="5%" style="text-align: center">&nbsp;</th>
                                         <th width="5%" style="text-align: center">&nbsp;</th>
                                     </tr>
@@ -110,6 +119,10 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
                                         else   if( $lt->result =='5' ) { $result = "<span class='label label-warning'>중 급</span>"; }
                                         else   if( $lt->result =='9' ) { $result = "<span class='label label-danger'>고 급</span>"; }
                                         else                            { $result = ""; }
+
+                                                if( $lt->chk_pc_m =='pc' ) { $chkpcm = "PC"; }
+                                        else   if( $lt->chk_pc_m =='mo' ) { $chkpcm = "Mobile"; }
+                                        else   { $chkpcm = ""; }
                                     ?>
                                         <tr>
                                             <td width="5%" style="text-align: center"><?=$lt->c_idx?></td>
@@ -117,7 +130,8 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
                                             <td width="25%" style="text-align: center"><?=$lt->groupname?></td>
                                             <td width="10%" style="text-align: center"><?=$lt->c_name?></td>
                                             <td width="20%" style="text-align: center"><?=$lt->mphone?></td>
-                                            <td width="20%" style="text-align: center"><?=$result?></td>
+                                            <td width="10%" style="text-align: center"><?=$result?></td>
+                                            <td width="10%" style="text-align: center"><?=$chkpcm?></td>
                                             <td width="5%" style="text-align: center">
                                                 <button type="button" class="btn btn-block btn-info btn-xs" data-toggle="modal" data-target="#modal-default" style="width: 52px;" onclick="confirm_result('<?=$lt->c_idx?>');">확 인</button>
                                             </td>

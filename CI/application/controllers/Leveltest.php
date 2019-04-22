@@ -38,7 +38,7 @@ class Leveltest extends MY_Controller
     public function level_test()
     {
         $this->load->helper('alert');
-        $return_url = "https://www.esangschool.com/";
+        $return_url = "https://www.google.co.kr/";
 
         $this->load->database();
 
@@ -59,13 +59,9 @@ class Leveltest extends MY_Controller
                 $first_q    = $this->Leveltest_m->select_first_question( $param );
 
                 if( $first_q )
-                {
                     $q_key  = $first_q[0]->n_auto;
-                }
                 else
-                {
                     alert( '해당 그룹의 질문이 없습니다.', $return_url );
-                }
             }
 
             if( $q_key )
@@ -74,21 +70,14 @@ class Leveltest extends MY_Controller
                 $param['q_key'] = $q_key;
                 $question_list  = $this->Leveltest_m->select_question( $param );
 
-                // 질문관련 오류 방지 by USK - 20190412
-                if( $question_list )
-                {
-                    $data   = array(
-                        'q_key'         => $q_key
-                        ,'lv_test_list' => $question_list
-                        ,'mem_answer'   => $mem_answer
-                        ,'quiz_no'      => $quiz_no
-                        ,'group_v'      => $question_list[0]->group_v
-                    );
-                }
-                else
-                {
-                    alert( '질문에 오류가 있습니다.', $return_url );
-                }
+
+                $data   = array(
+                    'q_key'         => $q_key
+                    ,'lv_test_list' => $question_list
+                    ,'mem_answer'   => $mem_answer
+                    ,'quiz_no'      => $quiz_no
+                    ,'group_v'      => $question_list[0]->group_v
+                );
 
                 $this->load->view('front_view/mobile/lv_test_list_v', $data);
             }
@@ -147,6 +136,7 @@ class Leveltest extends MY_Controller
         $mobile_01  = $this->input->get_post( 'mobile_01', true );
         $mobile_02  = $this->input->get_post( 'mobile_02', true );
         $mobile_03  = $this->input->get_post( 'mobile_03', true );
+        $chk_pc_m   = $this->input->get_post( 'chk_pc_m', true );       // [추가] PC or Mobile 구분 추가 by shhong 20190422
 
         $mobile = $mobile_01 .'-'. $mobile_02 .'-'. $mobile_03;
 
@@ -159,6 +149,7 @@ class Leveltest extends MY_Controller
             ,'mphone'   => $mobile
             ,'result'   => $level_key
             ,'group_v'  => $group_v
+            ,'chk_pc_m' => $chk_pc_m            // [추가] PC or Mobile 구분 추가 by shhong 20190422
         );
 
         $c_idx  = $this->Leveltest_m->insert_tbl_customer_info( $result_param );
@@ -191,7 +182,7 @@ class Leveltest extends MY_Controller
         }
 
         if( $save_error )
-            alert( '레벨테스트 결과 저장중 오류가 발생하였습니다.', "https://www.esangschool.com/" );
+            alert( '레벨테스트 결과 저장중 오류가 발생하였습니다.', "https://www.google.co.kr/" );
         else
             alert( '상담 신청이 완료 되었습니다.', "https://pf.kakao.com/_yrGNj" );
     }

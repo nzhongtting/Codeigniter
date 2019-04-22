@@ -79,6 +79,9 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
         });
     }
 
+
+    function poplvtest(Z) { window.open("/CI/Leveltest/level_test?quiz_no=1&group_v="+Z, "a", "width=530, height=922, left=100, top=50"); }
+
 </script>
 
 <!--- main start  Div 에 작성 //-->
@@ -142,7 +145,7 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
                                     <tr bgcolor="#b0def8" onmouseover="this.style.background='#b0def8'" onmouseout="this.style.background='#b0def8'" >
                                         <th width="20%" style="text-align: center;">TiTle </th>
                                         <th width="20%" style="text-align: center;">Title & 그룹 처리</th>
-                                        <th colspan="4" style="text-align: center;" width="60%">관리항목</th>
+                                        <th colspan="5" style="text-align: center;" width="60%">관리항목</th>
                                     </tr>
 
                                     <?php
@@ -172,8 +175,12 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
                                             <td align="center">
                                                 <a href="/CI/Levellist/index/0/0/0|<?=$lt->group_v?>" class="btn btn-block btn-default btn-xs" role="button" style="width: 100px"> <i class="fa fa-fw fa-th-list"></i> 결과 목록</a>
                                             </td>
+                                            <!-- // [추가] PC or Mobile 구분 추가 by shhong 20190422 //-->
                                             <td align="center">
-                                                <a href="/CI/Leveltest/level_test?quiz_no=1&group_v=<?=$lt->group_v?>" target="_new" class="btn btn-block btn-default btn-xs" role="button" style="width: 60px"> <i class="fa fa-fw fa-link"></i> 확인  </a>
+                                                <a href="javascript:poplvtest('<?=$lt->group_v?>');" target="_new" class="btn btn-block btn-default btn-xs" role="button" style="width: 100px"> <i class="fa fa-fw fa-link"></i> PC 확인  </a>
+                                            </td>
+                                            <td align="center">
+                                                <a href="/CI/Leveltest/level_test?quiz_no=1&group_v=<?=$lt->group_v?>" target="_new" class="btn btn-block btn-default btn-xs" role="button" style="width: 100px"> <i class="fa fa-fw fa-link"></i> 모바일 확인  </a>
                                             </td>
                                         </tr>
                                     <?php
