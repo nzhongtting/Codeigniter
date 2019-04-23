@@ -182,8 +182,30 @@ class Leveltest extends MY_Controller
         }
 
         if( $save_error )
+        {
             alert( '레벨테스트 결과 저장중 오류가 발생하였습니다.', "https://www.google.co.kr/" );
+        }
         else
-            alert( '상담 신청이 완료 되었습니다.', "https://pf.kakao.com/_yrGNj" );
+        {
+            if( $this->isMobile() )
+            {
+                // Mobile
+                alert( '상담 신청이 완료 되었습니다.', "https://www.google.co.kr" );
+            }
+            else
+            {
+                // PC
+                alert_openurl_close('상담 신청이 완료 되었습니다.','/CI/Levellist');
+            }
+
+        }
+
+    }
+
+    // check mobile or pc
+    function isMobile()
+    {
+        return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
     }
 }
+

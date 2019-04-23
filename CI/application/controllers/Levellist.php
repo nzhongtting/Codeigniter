@@ -133,7 +133,17 @@ class Levellist extends MY_Controller
                 $arraynum[$j] = $i ;
                 $j++;
             }
-            $k = $arraynum[$page];
+
+            if(empty($arraynum[$page]))
+            {
+                $last_ct = count($arraynum) - 1 ;       // when wrong number of $page be entered
+                $k = $arraynum[$last_ct];
+            }
+            else
+            {
+                $k = $arraynum[$page];
+            }
+
             return $k;
         }
 

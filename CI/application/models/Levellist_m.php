@@ -227,4 +227,20 @@ class Levellist_m extends CI_Model
         }
     }
 
+    ### DELETE 레벨테스트 결과
+    function db_delete_result($cidx)
+    {
+        log_message('DEBUG', ' #### PWD : Levellist_m/db_delete_result $cidx :'.$cidx.' - by shhong');
+
+        $this->db->where('c_idx', $cidx);
+        $this->db->delete('Tbl_customer_info');
+
+        $this->db->where('c_idx', $cidx);
+        $this->db->delete('Tbl_leveltest_result');
+
+        $this->db->where('c_idx', $cidx);
+        $this->db->delete('Tbl_level_temporary');
+
+    }
+
 }

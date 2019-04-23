@@ -100,3 +100,19 @@ function temporary_crud(Z)
         error: function () {   console.log('자료가 없습니다.');    }   });
 
 }
+
+function result_del(Z)
+{
+    ans = confirm("정말 삭제하시겠습니까 ?");
+    if( ans == true )
+    {
+        $.ajax({cache:false,url: "/CI/Ajax_leveltest/set_result/afterdelresult",data: { c_idx : Z  }, success: function(result)
+            {
+            },
+            complete: function ()
+            {
+                location.reload();
+            },
+            error: function () {   console.log('자료가 없습니다.');    }   });
+    }
+}

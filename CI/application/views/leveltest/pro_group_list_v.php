@@ -145,6 +145,7 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
                                     <tr bgcolor="#b0def8" onmouseover="this.style.background='#b0def8'" onmouseout="this.style.background='#b0def8'" >
                                         <th width="20%" style="text-align: center;">TiTle </th>
                                         <th width="20%" style="text-align: center;">Title & 그룹 처리</th>
+                                        <th width="5%" style="text-align: center;">CODE</th>
                                         <th colspan="5" style="text-align: center;" width="60%">관리항목</th>
                                     </tr>
 
@@ -165,6 +166,7 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
                                                     </tr>
                                                 </table>
                                             </td>
+                                            <td align="center"><?=$lt->group_v?></td>
                                             <td align="center">
                                                 <a href="<?php echo $link_result ; ?>" class="btn btn-block btn-default btn-xs" role="button" style="width: 130px"> <i class="fa fa-fw fa-television"></i> 결과 화면 관리 - ①
                                             </td>

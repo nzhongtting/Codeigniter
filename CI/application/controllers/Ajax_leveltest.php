@@ -96,4 +96,13 @@ class Ajax_leveltest extends MY_Controller
         $c_idx		    = $this->input->get_post( 'c_idx', true );
         $this->Levellist_m->set_temporary_info($c_idx);
     }
+
+    public function set_result()
+    {
+        $this->run_check('Ajax_leveltest/set_result');
+        $c_idx		    = $this->input->get_post( 'c_idx', true );
+        $this->Levellist_m->db_delete_result($c_idx);
+    }
+
+
 }

@@ -2,7 +2,7 @@
 include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
 ?>
 
-<script src="/CI/include/levellist.js?v=2019040440" type="text/javascript"></script>
+<script src="/CI/include/levellist.js?v=2019040441" type="text/javascript"></script>
 
 <!--- main start  Div 에 작성 //-->
 <!------------------------------------------------------------------------------------------------------------------------------ //-->
@@ -98,11 +98,10 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
                                         <th width="10%" style="text-align: center">등록일</th>
                                         <th width="25%" style="text-align: center">Title</th>
                                         <th width="10%" style="text-align: center">이름</th>
-                                        <th width="20%" style="text-align: center">연락처</th>
-                                        <th width="10%" style="text-align: center">결과</th>
-                                        <th width="10%" style="text-align: center">&nbsp;</th>
-                                        <th width="5%" style="text-align: center">&nbsp;</th>
-                                        <th width="5%" style="text-align: center">&nbsp;</th>
+                                        <th width="15%" style="text-align: center">연락처</th>
+                                        <th width="5%" style="text-align: center">결과</th>
+                                        <th width="15%" style="text-align: center">구분</th>
+                                        <th width="15%" colspan="3" style="text-align: center">&nbsp;처리</th>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -129,15 +128,16 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
                                             <td width="10%" style="text-align: center"><?=$inday?></td>
                                             <td width="25%" style="text-align: center"><?=$lt->groupname?></td>
                                             <td width="10%" style="text-align: center"><?=$lt->c_name?></td>
-                                            <td width="20%" style="text-align: center"><?=$lt->mphone?></td>
-                                            <td width="10%" style="text-align: center"><?=$result?></td>
-                                            <td width="10%" style="text-align: center"><?=$chkpcm?></td>
+                                            <td width="15%" style="text-align: center"><?=$lt->mphone?></td>
+                                            <td width="5%" style="text-align: center"><?=$result?></td>
+                                            <td width="15%" style="text-align: center"><?=$chkpcm?></td>
                                             <td width="5%" style="text-align: center">
                                                 <button type="button" class="btn btn-block btn-info btn-xs" data-toggle="modal" data-target="#modal-default" style="width: 52px;" onclick="confirm_result('<?=$lt->c_idx?>');">확 인</button>
                                             </td>
                                             <td width="5%" style="text-align: center">
                                                 <button type="button" class="btn btn-block btn-default btn-xs" onclick="temporary_crud('<?=$lt->c_idx?>')" <?php if( $lt->temporary_yon =='1' ) { echo " disabled"; } else { echo ""; } ?> >TEMP <i class="fa fa-fw fa-tags"></i></button>
                                             </td>
+                                            <td width="5%" style="text-align: center"><button type="button" class="btn btn-block btn-danger btn-xs" style="width: 52px;" onclick="result_del('<?=$lt->c_idx?>');">삭 제</button></td>
                                         </tr>
                                     <?php
                                     }

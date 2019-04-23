@@ -30,6 +30,24 @@ function alert_close($msg)
 }
 
 
+//	부모창 url 변동 후 팝업창 닫기
+function alert_openurl_close($msg , $url='')
+{
+    $CI =& get_instance();
+    echo "<meta http-equiv=\"content-type\" content=\"text/html; charset=".$CI->config->item('charset'). "\" />" ;
+
+    echo "
+	<SCRIPT type='text/JavaScript'>
+	alert('".$msg."');
+    opener.location.replace('".$url."');
+	window.close();
+	</SCRIPT>";
+    exit ;
+
+}
+
+
+
 //	경고창만
 function alert_only($msg, $exit=TRUE)
 {
