@@ -222,7 +222,7 @@ class Levellist_m extends CI_Model
         if ($type == 'count') {
             return $query->num_rows();
         } else {
-            log_message('DEBUG', '#### PWD : Levellist_m/get_group_info $sql : ' . $sql . '  - by shhong');
+            // log_message('DEBUG', '#### PWD : Levellist_m/get_group_info $sql : ' . $sql . '  - by shhong');
             return $query->row_array();
         }
     }
@@ -241,6 +241,15 @@ class Levellist_m extends CI_Model
         $this->db->where('c_idx', $cidx);
         $this->db->delete('Tbl_level_temporary');
 
+    }
+
+    ### 고객 핸드폰 중복 체크
+    function chk_mphone($mphone)
+    {
+        $sql = "SELECT count(*) cnt FROM Tbl_customer_info where mphone='" . $mphone . "' ";
+        $query = $this->db->query($sql);
+        $row = $query->row();
+        return $row->cnt;
     }
 
 }

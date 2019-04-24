@@ -171,6 +171,9 @@ class Levellist extends MY_Controller
 
             $groupinfo = $this->Levellist_m -> get_group_info($item->g_idx,'');
             $item->groupname      = $groupinfo['group_title'] ;
+
+            $cnt_mphone = $this ->Levellist_m ->chk_mphone($item->mphone);
+            $item->cntmphone = $cnt_mphone ;
         }
 
         $str_links = $this->pagination->create_links();

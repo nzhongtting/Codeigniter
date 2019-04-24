@@ -44,7 +44,7 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
 
 
                                 <form class="form-horizontal" id="search_action" name="search_action" method="post" accept-charset="utf-8"  onsubmit="return false;" >
-                                    <table class="table">
+                                    <table class="table" style="margin-bottom: 2px;">
                                         <tbody>
                                         <tr>
                                             <th><input type="text" class="form-control" id="c_name" name="c_name" placeholder="이름 ..."></th>
@@ -91,7 +91,7 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
                                             </th>
                                         </tr>
                                         </tbody></table>
-
+                                    &nbsp;&nbsp;&nbsp;연락처가 <font color="#ba4222" size="5">■</font>  색이면 중복입니다.
                                 <table class="table">
                                     <tbody><tr bgcolor="#b0def8">
                                         <th width="5%" style="text-align: center">No.</th>
@@ -128,7 +128,7 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
                                             <td width="10%" style="text-align: center"><?=$inday?></td>
                                             <td width="25%" style="text-align: center"><?=$lt->groupname?></td>
                                             <td width="10%" style="text-align: center"><?=$lt->c_name?></td>
-                                            <td width="15%" style="text-align: center"><?=$lt->mphone?></td>
+                                            <td width="15%" style="text-align: center;<?php if($lt->cntmphone > 1) { echo "color:#ba4222;'"; }  else { echo ""; } ?>"><?=$lt->mphone?></td>
                                             <td width="5%" style="text-align: center"><?=$result?></td>
                                             <td width="15%" style="text-align: center"><?=$chkpcm?></td>
                                             <td width="5%" style="text-align: center">
