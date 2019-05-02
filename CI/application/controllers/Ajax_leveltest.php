@@ -9,11 +9,23 @@ class Ajax_leveltest extends MY_Controller
         $this->ci =& get_instance();
         $this -> load -> database();
         $this->load->model(array('Levellist_m'));
+        $this->load->helper('viewutil') ;
     }
 
     public function index()
     {
         //  $this->lists();
+    }
+
+    public function get_memo()
+    {
+        $this->run_check('Ajax_leveltest/get_memo');
+        $m_idx		    = $this->input->get_post( 'm_idx', true );
+        $data					= array();
+
+        $data['each_memo'] = $this->Levellist_m->get_memo($m_idx);
+
+        $this->load->view('leveltest/just_lv_v', $data);
     }
 
     public function just_get()
@@ -104,5 +116,37 @@ class Ajax_leveltest extends MY_Controller
         $this->Levellist_m->db_delete_result($c_idx);
     }
 
+    public function get_memo_list()
+    {
+        $this->run_check('Ajax_leveltest/get_memo_list');
+        $c_idx		    = $this->input->get_post( 'c_idx', true );
+        $data					= array();
+
+        $data['memolist'] = $this->Levellist_m->get_memo_list($c_idx,'');
+        $this->load->view('leveltest/just_lv_v', $data);
+    }
+
+    public function del_memo()
+    {
+        $this->run_check('Ajax_leveltest/del_memo');
+        $m_idx		    = $this->input->get_post( 'm_idx', true );
+
+        $this->Levellist_m->del_memo($m_idx);
+    }
+
+    public function memo_save()
+    {
+        $this->run_check('Ajax_leveltest/memo_save');
+        $memo_body         = $this->commonclass->common_replace_quoto_f($this->input->post('memobody', TRUE));
+        $c_idx              = $this->commonclass->common_replace_quoto_f($this->input->post('selected_c_idx', TRUE));
+
+
+        log_message('DEBUG', '#### CHK : Ajax_leveltest/memo_save  :'.$memo_body.' by shhong');
+
+        $arrays['memo_body']    = $memo_body;
+        $arrays['c_idx']        = $c_idx;
+
+        $this->Levellist_m->memo_save($arrays);
+    }
 
 }

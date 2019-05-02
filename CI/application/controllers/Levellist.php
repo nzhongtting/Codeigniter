@@ -174,6 +174,9 @@ class Levellist extends MY_Controller
 
             $cnt_mphone = $this ->Levellist_m ->chk_mphone($item->mphone);
             $item->cntmphone = $cnt_mphone ;
+
+            $memo_cnt =  $this ->Levellist_m ->get_memo_list($item->c_idx,'count');
+            $item->cntmemo = $memo_cnt ;
         }
 
         $str_links = $this->pagination->create_links();

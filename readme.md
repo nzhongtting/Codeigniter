@@ -101,6 +101,17 @@ mysql> desc Tbl_problem ;
 | num_v        | tinyint(4)   | NO   |     | NULL    |                |
 | question_str | varchar(200) | NO   |     |         |                |
 +--------------+--------------+------+-----+---------+----------------+
+
+mysql> desc `Tbl_lv_memo` ;
++-----------+-------------+------+-----+---------+----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------+-------------+------+-----+---------+----------------+
+| m_idx     | int(11)     | NO   | PRI | NULL    | auto_increment |
+| c_idx     | varchar(11) | NO   |     |         |                |
+| date_in   | varchar(20) | NO   |     |         |                |
+| memo_body | text        | YES  |     | NULL    |                |
++-----------+-------------+------+-----+---------+----------------+
+
 \'
 
 Remove "index.php"  ----

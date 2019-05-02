@@ -58,7 +58,7 @@ function confirm_result(Z)
 
             if( result )
             {
-                $( '#levetest_justlist > tbody').html(result);
+                $('#levetest_justlist > tbody').html(result);
             }
             else
             {
@@ -68,21 +68,32 @@ function confirm_result(Z)
         },
         complete: function ()
         {
-            get_leveltest_usere(Z);
+            get_leveltest_usere(Z,'1');
         },
         error: function () {   console.log('자료가 없습니다.');    }   });
 }
 
-function get_leveltest_usere(Z)
+function get_leveltest_usere(Z,N)
 {
     $.ajax({dataType: "json",url: "/CI/Ajax_leveltest/get_user/getuserinfo",data: { c_idx : Z }, success: function(result){
 
             $.each(result, function (index, item)
             {
-                $('#u_name').html(item.c_name);
-                $('#c_inday').html(item.date_in);
-                $('#c_mphone').html(item.mphone);
-                $('#c_level').html(item.result);
+                if( N == 1 )
+                {
+                    $('#u_name1').html(item.c_name);
+                    $('#c_inday1').html(item.date_in);
+                    $('#c_mphone1').html(item.mphone);
+                    $('#c_level1').html(item.result);
+                }
+                else if( N == 2 )
+                {
+                    $('#u_name2').html(item.c_name);
+                    $('#c_inday2').html(item.date_in);
+                    $('#c_mphone2').html(item.mphone);
+                    $('#c_level2').html(item.result);
+                }
+
             });
         }, error: function () {   alert('회원정보가 없습니다');    }   });
 }
@@ -115,4 +126,118 @@ function result_del(Z)
             },
             error: function () {   console.log('자료가 없습니다.');    }   });
     }
+}
+
+function memo_action(Z)
+{
+    if($("#memo_w.collapsed-box").length)
+    {
+        $('#memobtn').trigger("click");
+    }
+
+    $('#selected_c_idx').val(Z);
+
+    $.ajax({cache:false,url: "/CI/Ajax_leveltest/get_memo_list/memolist",data: { c_idx : Z  },
+
+        success: function (result) {
+            $('#memo_justlist > tbody').html(result);
+        },
+        complete: function ()
+        {
+            // location.reload();
+        },
+        error: function () {   console.log('자료가 없습니다.');    }   });
+
+}
+
+function get_memo(Z,Y)
+{
+
+    $.ajax({cache:false,url: "/CI/Ajax_leveltest/get_memo/memoinfo",data: { m_idx : Z  },
+
+        success: function (result) {
+
+            if( result )
+            {
+                $( '#memo_body > tbody').html(result);
+            }
+            else
+            {
+                $( '#memo_body > tbody').html('<tr><td colspan=2 style="text-align: center"> <br><br>No Data </td></tr>');
+            }
+        },
+        complete: function ()
+        {
+            get_leveltest_usere(Y,'2');
+        },
+        error: function () {   console.log('자료가 없습니다.');    }   });
+
+}
+
+function delmemo(Z,Y)
+{
+
+    ans = confirm("정말 삭제하시겠습니까?");
+    if( ans == true )
+    {
+        $.ajax({
+            cache: false, url: "/CI/Ajax_leveltest/del_memo", data: {m_idx: Z},
+
+            success: function (result) {
+            },
+            complete: function () {
+                memo_action(Y);
+            },
+            error: function () {
+                console.log('자료가 없습니다.');
+            }
+        });
+    }
+}
+
+
+function memo_submit()
+{
+    var scidx =  $('#selected_c_idx').val();
+
+
+    if( scidx !='' )
+    {
+
+        if( $('#memobody').val() !='')
+        {
+            var form=$('#upload_action');
+            ans = confirm("메모를 등록하시겠습니까?");
+            if( ans == true )
+            {
+                $.ajax({
+                    cache: false,
+                    type: 'POST',
+                    url: '/CI/Ajax_leveltest/memo_save',
+                    data: form.serialize(),
+                    error: function () {
+                        $('#result_div').html('<p>An error has occurred</p>');
+                    },
+                    success: function (response) {
+                        // $("#etc_msg").val(response);
+                    },
+                    complete: function () {
+                        $('#memobody').val("");
+                        memo_action(scidx);
+                    }
+                });
+            }
+        }
+        else
+        {
+            alert('메모를 입력하세요');
+        }
+
+    }
+    else
+    {
+        alert('등록할 레벨테스트 결과의 "메모"버튼을 선택하세요');
+    }
+
+
 }

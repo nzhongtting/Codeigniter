@@ -252,4 +252,52 @@ class Levellist_m extends CI_Model
         return $row->cnt;
     }
 
+    function get_memo_list($c_idx,$type)
+    {
+        $sql =" select * from Tbl_lv_memo where c_idx ='$c_idx'  order by m_idx desc ";
+        log_message('DEBUG', '#### PWD : Levellist_m/get_memo_list $sql : '.$sql.'  - by shhong');
+        $query = $this->db->query($sql);
+
+
+        if( $type == 'count')
+        {
+            return  $query->num_rows();
+        }
+        else
+        {
+            return $query->result();
+        }
+    }
+
+    function get_memo($m_idx)
+    {
+        $sql =" select * from Tbl_lv_memo where m_idx ='$m_idx'";
+        log_message('DEBUG', '#### PWD : Levellist_m/get_memo $sql : '.$sql.'  - by shhong');
+        $query = $this->db->query($sql);
+        return $query->row_array();
+    }
+
+    function del_memo($m_idx)
+    {
+        log_message('DEBUG', ' #### PWD : Levellist_m/del_memo $midx :'.$m_idx.' - by shhong');
+
+        $this->db->where('m_idx', $m_idx);
+        $this->db->delete('Tbl_lv_memo');
+    }
+
+    function memo_save($arrays)
+    {
+
+        $insert_array = array(
+            'c_idx'                 => $arrays['c_idx'],
+            'memo_body'             => $arrays['memo_body'],
+            'date_in'               => time()
+        );
+
+        $this->db->insert('Tbl_lv_memo', $insert_array);
+        log_message('debug', '#### SQL : Levellist_m/memo_save : '.$this->db->last_query() .' - by shhong');
+        $result = $this->db->insert_id() ;
+        return $result;
+    }
+
 }

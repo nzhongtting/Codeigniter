@@ -2,7 +2,7 @@
 include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
 ?>
 
-<script src="/CI/include/levellist.js?v=2019040441" type="text/javascript"></script>
+<script src="/CI/include/levellist.js?v=2019040466" type="text/javascript"></script>
 
 <!--- main start  Div 에 작성 //-->
 <!------------------------------------------------------------------------------------------------------------------------------ //-->
@@ -92,7 +92,7 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
                                         </tr>
                                         </tbody></table>
                                     &nbsp;&nbsp;&nbsp;연락처가 <font color="#ba4222" size="5">■</font>  색이면 중복입니다.
-                                <table class="table">
+                                <table class="table" border="0">
                                     <tbody><tr bgcolor="#b0def8">
                                         <th width="5%" style="text-align: center">No.</th>
                                         <th width="10%" style="text-align: center">등록일</th>
@@ -100,13 +100,13 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
                                         <th width="10%" style="text-align: center">이름</th>
                                         <th width="15%" style="text-align: center">연락처</th>
                                         <th width="5%" style="text-align: center">결과</th>
-                                        <th width="15%" style="text-align: center">구분</th>
-                                        <th width="15%" colspan="3" style="text-align: center">&nbsp;처리</th>
+                                        <th width="10%" style="text-align: center">구분</th>
+                                        <th width="20%" colspan="3" style="text-align: center">&nbsp;처리</th>
                                     </tr>
                                     </tbody>
                                 </table>
 
-                                <table class="table table-hover">
+                                <table class="table table-hover" border="0">
                                     <tbody>
 
                                     <?php
@@ -122,6 +122,8 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
                                                 if( $lt->chk_pc_m =='pc' ) { $chkpcm = "PC"; }
                                         else   if( $lt->chk_pc_m =='mo' ) { $chkpcm = "Mobile"; }
                                         else   { $chkpcm = ""; }
+
+                                                if( $lt->cntmemo > 0 ) { $class_btn_bg = " btn-dark"; } else { $class_btn_bg = " btn-default"; }
                                     ?>
                                         <tr>
                                             <td width="5%" style="text-align: center"><?=$lt->c_idx?></td>
@@ -130,7 +132,10 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
                                             <td width="10%" style="text-align: center"><?=$lt->c_name?></td>
                                             <td width="15%" style="text-align: center;<?php if($lt->cntmphone > 1) { echo "color:#ba4222;'"; }  else { echo ""; } ?>"><?=$lt->mphone?></td>
                                             <td width="5%" style="text-align: center"><?=$result?></td>
-                                            <td width="15%" style="text-align: center"><?=$chkpcm?></td>
+                                            <td width="10%" style="text-align: center"><?=$chkpcm?></td>
+                                            <td width="5%" style="text-align: center">
+                                                <button type="button" class="btn btn-block <?=$class_btn_bg?> btn-xs" onclick="memo_action('<?=$lt->c_idx?>')">메모 <i class="fa fa-fw fa-pencil"></i></button>
+                                            </td>
                                             <td width="5%" style="text-align: center">
                                                 <button type="button" class="btn btn-block btn-info btn-xs" data-toggle="modal" data-target="#modal-default" style="width: 52px;" onclick="confirm_result('<?=$lt->c_idx?>');">확 인</button>
                                             </td>
@@ -163,6 +168,86 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
             </div><!--  1 //-->
 
 
+
+
+
+            <div class="col-xs-12"> <!--  1 //-->
+                <div class="box box-primary box box-primary collapsed-box"> <!--  2 //-->
+
+                    <div class="box collapsed-box" id="memo_w" name="memo_w">
+                        <div class="box-header">
+                            <h3 class="box-title">MEMO &nbsp;<i class="fa fa-pencil-square-o"></i></h3>
+                            <!-- tools box -->
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse" id="memobtn" name="memobtn" ><i class="fa fa-plus"></i></button>
+                            </div>
+                            <!-- /. tools -->
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body pad" style="background: #efefef">
+
+                            <div class="row">
+                                <div class="col-md-6">
+
+                                    <form method="post" id="upload_action" name="upload_action">
+                                        <table width="100%">
+                                            <tr><td><textarea class="textarea" id="memobody" name="memobody" placeholder="Place some text here" style="width: 100%; height: 176px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea></td></tr>
+                                            <tr><td height="15"></td></tr>
+                                            <tr><td><input type="hidden" id="selected_c_idx" name="selected_c_idx" value=""> <button type="button" class="btn btn-primary pull-right" onclick="memo_submit()">메모저장</button></td></tr>
+                                        </table>
+                                    </form>
+
+                                </div>
+                                <div class="col-md-6">
+
+                                    <div class="box">
+                                        <!-- /.box-header -->
+
+
+                                        <table class="table table-striped" id="memo_justlist" name="memo_justlist">
+                                            <colgroup>
+                                                <col width="15%">
+                                                <col width="65%">
+                                                <col width="20%">
+                                            </colgroup>
+                                            <thead>
+                                            <tr>
+                                                <th scope="col" style="text-align: center;width: 15%">등록일시</th>
+                                                <th scope="col" style="text-align: center;width: 65%">내용</th>
+                                                <th scope="col" style="text-align: center;width: 20%">처리</th>
+                                            </tr>
+                                            </thead>
+
+                                            <tbody>
+
+                                            <tr style="text-align: center">
+                                            <tr style='text-align: center'><td colspan='3' align='center' height='190px'> <br><br><br>레벨테스트 목록의 "메모" 버튼을 눌러주세요</td></tr>
+                                            </tr>
+
+                                            </tbody>
+
+                                        </table>
+
+                                        <!-- /.box-body -->
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div><!--  2 //-->
+            </div><!--  1 //-->
+
+
+
+
+
+
+
             <div class="col-xs-12"> <!--  1 //-->
                 <div class="box box-primary box box-primary collapsed-box"> <!--  2 //-->
 
@@ -180,8 +265,7 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
                     <!-- [시작] 목록 //-->
                     <div class="box-body table-responsive no-padding" style="display: none;">
                         <form class="form-horizontal" id="temporary_action" name="temporary_action" method="post" accept-charset="utf-8"  onsubmit="return false;" >
-<br>
-
+                        <br>
                             <table class="table" id="temporary_list" name="temporary_list" >
                                 <tbody>
                                 <tr>
@@ -241,6 +325,7 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
             </div><!--  1 //-->
 
 
+
             <div class="modal fade" id="modal-default">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -250,12 +335,12 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
                             <h3 class="modal-title">레벨테스트 결과</h3><br>
 
                             <div class="row">
-                                <div class="col-md-6">&nbsp;&nbsp;이름 : <span id="u_name" name="u_name"></span></div>
-                                <div class="col-md-6">등록일 : <span id="c_inday" name="c_inday"></span></div>
+                                <div class="col-md-6">&nbsp;&nbsp;이름 : <span id="u_name1" name="u_name1"></span></div>
+                                <div class="col-md-6">레벨테스트 등록일 : <span id="c_inday1" name="c_inday1"></span></div>
                             </div>
                             <div class="row">
-                                <div class="col-md-6">&nbsp;&nbsp;연락처 : <span id="c_mphone" name="c_mphone"></span></div>
-                                <div class="col-md-6">LEVEL : <span id="c_level" name="c_level"></span></div>
+                                <div class="col-md-6">&nbsp;&nbsp;연락처 : <span id="c_mphone1" name="c_mphone1"></span></div>
+                                <div class="col-md-6">LEVEL : <span id="c_level1" name="c_level1"></span></div>
                             </div>
 
                         </div>
@@ -289,6 +374,64 @@ include HOSTING_MAIN_ROOT . "/application/views/leftmenu_admin.php" ;
                 </div>
                 <!-- /.modal-dialog -->
             </div>
+
+
+
+
+
+
+
+            <div class="modal fade" id="modal-memo">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+
+
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span></button>
+                            <h3 class="modal-title">레벨테스트 메모</h3><br>
+
+                            <div class="row">
+                                <div class="col-md-6">&nbsp;&nbsp;이름 : <span id="u_name2" name="u_name2"></span></div>
+                                <div class="col-md-6">레벨테스트 등록일 : <span id="c_inday2" name="c_inday2"></span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">&nbsp;&nbsp;연락처 : <span id="c_mphone2" name="c_mphone2"></span></div>
+                                <div class="col-md-6">LEVEL : <span id="c_level2" name="c_level2"></span></div>
+                            </div>
+                        </div>
+
+
+                        <div class="modal-body">
+
+                                    <table cellpadding="0" cellspacing="0" class="style1" id="memo_body" name="memo_body" style="width: 100%;">
+                                        <colgroup>
+                                            <col width="3px">
+                                            <col width="200px">
+                                        </colgroup>
+                                        <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th bgcolor="#efefef">&nbsp;등록내용 </th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+
+
+
 
 
         </div>

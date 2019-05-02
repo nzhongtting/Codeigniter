@@ -43,7 +43,7 @@ $login_name = $this->session->userdata('sess_name');
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini wysihtml5-supported">
 <div class="wrapper">
 
     <header class="main-header">

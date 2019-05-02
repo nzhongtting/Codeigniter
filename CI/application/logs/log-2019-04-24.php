@@ -3080,3 +3080,505 @@ INFO - 2019-04-24 15:50:04 --> File loaded: /home/testuser01/www/CI/application/
 INFO - 2019-04-24 15:50:04 --> File loaded: /home/testuser01/www/CI/application/views/footer_admin.php
 INFO - 2019-04-24 15:50:04 --> Final output sent to browser
 DEBUG - 2019-04-24 15:50:04 --> Total execution time: 0.0190
+INFO - 2019-04-24 15:54:29 --> Config Class Initialized
+INFO - 2019-04-24 15:54:29 --> Hooks Class Initialized
+DEBUG - 2019-04-24 15:54:29 --> UTF-8 Support Enabled
+INFO - 2019-04-24 15:54:29 --> Utf8 Class Initialized
+INFO - 2019-04-24 15:54:29 --> URI Class Initialized
+INFO - 2019-04-24 15:54:29 --> Router Class Initialized
+INFO - 2019-04-24 15:54:29 --> Output Class Initialized
+INFO - 2019-04-24 15:54:29 --> Security Class Initialized
+DEBUG - 2019-04-24 15:54:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-04-24 15:54:29 --> Input Class Initialized
+INFO - 2019-04-24 15:54:29 --> Language Class Initialized
+INFO - 2019-04-24 15:54:29 --> Loader Class Initialized
+INFO - 2019-04-24 15:54:29 --> Controller Class Initialized
+INFO - 2019-04-24 15:54:29 --> Helper loaded: form_helper
+INFO - 2019-04-24 15:54:29 --> Helper loaded: url_helper
+INFO - 2019-04-24 15:54:29 --> Helper loaded: viewutil_helper
+INFO - 2019-04-24 15:54:29 --> Session: Class initialized using 'files' driver.
+INFO - 2019-04-24 15:54:29 --> Database Driver Class Initialized
+INFO - 2019-04-24 15:54:29 --> Model "Levellist_m" initialized
+INFO - 2019-04-24 15:54:29 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2019-04-24 15:54:29 --> Pagination Class Initialized
+INFO - 2019-04-24 15:54:29 --> File loaded: /home/testuser01/www/CI/application/views/header_admin.php
+DEBUG - 2019-04-24 15:54:29 --> #### PWD : Levellist/index() , WHO : a_admin - by shhong
+DEBUG - 2019-04-24 15:54:29 --> #### PWD : $searchtype : 0 - by shhong
+DEBUG - 2019-04-24 15:54:29 --> #### PWD : Levellist_m/searchtype_query  - by shhong
+DEBUG - 2019-04-24 15:54:29 --> #### PWD : Levellist_m/searchtype_query $wherequery :   - by shhong
+DEBUG - 2019-04-24 15:54:29 --> #### PWD : Levellist_m/search_record_count $sql : SELECT COUNT(*) As cnt FROM Tbl_customer_info WHERE c_idx LIKE '%%' - by shhong
+DEBUG - 2019-04-24 15:54:29 --> #### PWD : Levellist_m/searchtype_query  - by shhong
+DEBUG - 2019-04-24 15:54:29 --> #### PWD : Levellist_m/searchtype_query $wherequery :   - by shhong
+DEBUG - 2019-04-24 15:54:29 --> #### PWD : Levellist_m/get_list $sql : SELECT * FROM Tbl_customer_info WHERE c_idx LIKE '%%' ORDER BY c_idx desc   LIMIT 0, 10 - by shhong
+DEBUG - 2019-04-24 15:54:29 --> #### PWD : Levellist_m/get_temporary_list $sql :  select * from Tbl_level_temporary where increase between 1 and 5  order by increase desc   - by shhong
+DEBUG - 2019-04-24 15:54:29 --> #### PWD : Levellist_m/get_leveltest_group $sql : Select * from Tbl_pro_group order by group_v desc   - by shhong
+INFO - 2019-04-24 15:54:29 --> File loaded: /home/testuser01/www/CI/application/views/leveltest/lv_list_v.php
+INFO - 2019-04-24 15:54:29 --> File loaded: /home/testuser01/www/CI/application/views/footer_admin.php
+INFO - 2019-04-24 15:54:29 --> Final output sent to browser
+DEBUG - 2019-04-24 15:54:29 --> Total execution time: 0.0356
+INFO - 2019-04-24 15:54:30 --> Config Class Initialized
+INFO - 2019-04-24 15:54:30 --> Hooks Class Initialized
+DEBUG - 2019-04-24 15:54:30 --> UTF-8 Support Enabled
+INFO - 2019-04-24 15:54:30 --> Utf8 Class Initialized
+INFO - 2019-04-24 15:54:30 --> URI Class Initialized
+INFO - 2019-04-24 15:54:30 --> Router Class Initialized
+INFO - 2019-04-24 15:54:30 --> Output Class Initialized
+INFO - 2019-04-24 15:54:30 --> Security Class Initialized
+DEBUG - 2019-04-24 15:54:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-04-24 15:54:30 --> Input Class Initialized
+INFO - 2019-04-24 15:54:30 --> Language Class Initialized
+INFO - 2019-04-24 15:54:30 --> Loader Class Initialized
+INFO - 2019-04-24 15:54:30 --> Controller Class Initialized
+INFO - 2019-04-24 15:54:30 --> Helper loaded: form_helper
+INFO - 2019-04-24 15:54:30 --> Helper loaded: url_helper
+INFO - 2019-04-24 15:54:30 --> Helper loaded: viewutil_helper
+INFO - 2019-04-24 15:54:30 --> Session: Class initialized using 'files' driver.
+INFO - 2019-04-24 15:54:30 --> File loaded: /home/testuser01/www/CI/application/views/header_admin.php
+DEBUG - 2019-04-24 15:54:30 --> #### PWD : Problem_set/index() , WHO : a_admin - by shhong
+INFO - 2019-04-24 15:54:30 --> Database Driver Class Initialized
+INFO - 2019-04-24 15:54:30 --> Model "Problem_m" initialized
+INFO - 2019-04-24 15:54:30 --> File loaded: /home/testuser01/www/CI/application/views/leveltest/pro_group_list_v.php
+INFO - 2019-04-24 15:54:30 --> File loaded: /home/testuser01/www/CI/application/views/footer_admin.php
+INFO - 2019-04-24 15:54:30 --> Final output sent to browser
+DEBUG - 2019-04-24 15:54:30 --> Total execution time: 0.0055
+INFO - 2019-04-24 15:54:31 --> Config Class Initialized
+INFO - 2019-04-24 15:54:31 --> Hooks Class Initialized
+DEBUG - 2019-04-24 15:54:31 --> UTF-8 Support Enabled
+INFO - 2019-04-24 15:54:31 --> Utf8 Class Initialized
+INFO - 2019-04-24 15:54:31 --> URI Class Initialized
+INFO - 2019-04-24 15:54:31 --> Router Class Initialized
+INFO - 2019-04-24 15:54:31 --> Output Class Initialized
+INFO - 2019-04-24 15:54:31 --> Security Class Initialized
+DEBUG - 2019-04-24 15:54:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-04-24 15:54:31 --> Input Class Initialized
+INFO - 2019-04-24 15:54:31 --> Language Class Initialized
+INFO - 2019-04-24 15:54:31 --> Loader Class Initialized
+INFO - 2019-04-24 15:54:31 --> Controller Class Initialized
+INFO - 2019-04-24 15:54:31 --> Helper loaded: form_helper
+INFO - 2019-04-24 15:54:31 --> Helper loaded: url_helper
+INFO - 2019-04-24 15:54:31 --> Helper loaded: viewutil_helper
+INFO - 2019-04-24 15:54:31 --> Session: Class initialized using 'files' driver.
+INFO - 2019-04-24 15:54:31 --> Database Driver Class Initialized
+INFO - 2019-04-24 15:54:31 --> Model "Levellist_m" initialized
+INFO - 2019-04-24 15:54:31 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2019-04-24 15:54:31 --> Pagination Class Initialized
+INFO - 2019-04-24 15:54:31 --> File loaded: /home/testuser01/www/CI/application/views/header_admin.php
+DEBUG - 2019-04-24 15:54:31 --> #### PWD : Levellist/index() , WHO : a_admin - by shhong
+DEBUG - 2019-04-24 15:54:31 --> #### PWD : $searchtype : 0 - by shhong
+DEBUG - 2019-04-24 15:54:31 --> #### PWD : Levellist_m/searchtype_query  - by shhong
+DEBUG - 2019-04-24 15:54:31 --> #### PWD : Levellist_m/searchtype_query $wherequery :   - by shhong
+DEBUG - 2019-04-24 15:54:31 --> #### PWD : Levellist_m/search_record_count $sql : SELECT COUNT(*) As cnt FROM Tbl_customer_info WHERE c_idx LIKE '%%' - by shhong
+DEBUG - 2019-04-24 15:54:31 --> #### PWD : Levellist_m/searchtype_query  - by shhong
+DEBUG - 2019-04-24 15:54:31 --> #### PWD : Levellist_m/searchtype_query $wherequery :   - by shhong
+DEBUG - 2019-04-24 15:54:31 --> #### PWD : Levellist_m/get_list $sql : SELECT * FROM Tbl_customer_info WHERE c_idx LIKE '%%' ORDER BY c_idx desc   LIMIT 0, 10 - by shhong
+DEBUG - 2019-04-24 15:54:31 --> #### PWD : Levellist_m/get_temporary_list $sql :  select * from Tbl_level_temporary where increase between 1 and 5  order by increase desc   - by shhong
+DEBUG - 2019-04-24 15:54:31 --> #### PWD : Levellist_m/get_leveltest_group $sql : Select * from Tbl_pro_group order by group_v desc   - by shhong
+INFO - 2019-04-24 15:54:31 --> File loaded: /home/testuser01/www/CI/application/views/leveltest/lv_list_v.php
+INFO - 2019-04-24 15:54:31 --> File loaded: /home/testuser01/www/CI/application/views/footer_admin.php
+INFO - 2019-04-24 15:54:31 --> Final output sent to browser
+DEBUG - 2019-04-24 15:54:31 --> Total execution time: 0.0282
+INFO - 2019-04-24 15:59:12 --> Config Class Initialized
+INFO - 2019-04-24 15:59:12 --> Hooks Class Initialized
+DEBUG - 2019-04-24 15:59:12 --> UTF-8 Support Enabled
+INFO - 2019-04-24 15:59:12 --> Utf8 Class Initialized
+INFO - 2019-04-24 15:59:12 --> URI Class Initialized
+INFO - 2019-04-24 15:59:12 --> Router Class Initialized
+INFO - 2019-04-24 15:59:12 --> Output Class Initialized
+INFO - 2019-04-24 15:59:12 --> Security Class Initialized
+DEBUG - 2019-04-24 15:59:12 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-04-24 15:59:12 --> Input Class Initialized
+INFO - 2019-04-24 15:59:12 --> Language Class Initialized
+INFO - 2019-04-24 15:59:12 --> Loader Class Initialized
+INFO - 2019-04-24 15:59:12 --> Controller Class Initialized
+INFO - 2019-04-24 15:59:12 --> Helper loaded: form_helper
+INFO - 2019-04-24 15:59:12 --> Helper loaded: url_helper
+INFO - 2019-04-24 15:59:12 --> Helper loaded: viewutil_helper
+INFO - 2019-04-24 15:59:12 --> Session: Class initialized using 'files' driver.
+INFO - 2019-04-24 15:59:12 --> Database Driver Class Initialized
+INFO - 2019-04-24 15:59:12 --> Helper loaded: alert_helper
+INFO - 2019-04-24 15:59:13 --> Config Class Initialized
+INFO - 2019-04-24 15:59:13 --> Hooks Class Initialized
+DEBUG - 2019-04-24 15:59:13 --> UTF-8 Support Enabled
+INFO - 2019-04-24 15:59:13 --> Utf8 Class Initialized
+INFO - 2019-04-24 15:59:13 --> URI Class Initialized
+INFO - 2019-04-24 15:59:13 --> Router Class Initialized
+INFO - 2019-04-24 15:59:13 --> Output Class Initialized
+INFO - 2019-04-24 15:59:13 --> Security Class Initialized
+DEBUG - 2019-04-24 15:59:13 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-04-24 15:59:13 --> Input Class Initialized
+INFO - 2019-04-24 15:59:13 --> Language Class Initialized
+INFO - 2019-04-24 15:59:13 --> Loader Class Initialized
+INFO - 2019-04-24 15:59:13 --> Controller Class Initialized
+INFO - 2019-04-24 15:59:13 --> Helper loaded: form_helper
+INFO - 2019-04-24 15:59:13 --> Helper loaded: url_helper
+INFO - 2019-04-24 15:59:13 --> Helper loaded: viewutil_helper
+INFO - 2019-04-24 15:59:13 --> Session: Class initialized using 'files' driver.
+INFO - 2019-04-24 15:59:13 --> Database Driver Class Initialized
+INFO - 2019-04-24 15:59:13 --> Helper loaded: alert_helper
+INFO - 2019-04-24 15:59:13 --> File loaded: /home/testuser01/www/CI/application/views/auth/login_v.php
+INFO - 2019-04-24 15:59:13 --> Final output sent to browser
+DEBUG - 2019-04-24 15:59:13 --> Total execution time: 0.0028
+INFO - 2019-04-24 17:27:42 --> Config Class Initialized
+INFO - 2019-04-24 17:27:42 --> Hooks Class Initialized
+DEBUG - 2019-04-24 17:27:42 --> UTF-8 Support Enabled
+INFO - 2019-04-24 17:27:42 --> Utf8 Class Initialized
+INFO - 2019-04-24 17:27:42 --> URI Class Initialized
+INFO - 2019-04-24 17:27:42 --> Router Class Initialized
+INFO - 2019-04-24 17:27:42 --> Output Class Initialized
+INFO - 2019-04-24 17:27:42 --> Security Class Initialized
+DEBUG - 2019-04-24 17:27:42 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-04-24 17:27:42 --> Input Class Initialized
+INFO - 2019-04-24 17:27:42 --> Language Class Initialized
+INFO - 2019-04-24 17:27:42 --> Loader Class Initialized
+INFO - 2019-04-24 17:27:42 --> Controller Class Initialized
+INFO - 2019-04-24 17:27:42 --> Helper loaded: form_helper
+INFO - 2019-04-24 17:27:42 --> Helper loaded: url_helper
+INFO - 2019-04-24 17:27:42 --> Helper loaded: viewutil_helper
+INFO - 2019-04-24 17:27:42 --> Session: Class initialized using 'files' driver.
+INFO - 2019-04-24 17:27:42 --> File loaded: /home/testuser01/www/CI/application/views/header_admin.php
+INFO - 2019-04-24 17:27:42 --> Helper loaded: alert_helper
+ERROR - 2019-04-24 17:27:42 --> #### Temp/index() - You need login by shhong
+INFO - 2019-04-24 17:27:43 --> Config Class Initialized
+INFO - 2019-04-24 17:27:43 --> Hooks Class Initialized
+DEBUG - 2019-04-24 17:27:43 --> UTF-8 Support Enabled
+INFO - 2019-04-24 17:27:43 --> Utf8 Class Initialized
+INFO - 2019-04-24 17:27:43 --> URI Class Initialized
+INFO - 2019-04-24 17:27:43 --> Router Class Initialized
+INFO - 2019-04-24 17:27:43 --> Output Class Initialized
+INFO - 2019-04-24 17:27:43 --> Security Class Initialized
+DEBUG - 2019-04-24 17:27:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-04-24 17:27:43 --> Input Class Initialized
+INFO - 2019-04-24 17:27:43 --> Language Class Initialized
+INFO - 2019-04-24 17:27:43 --> Loader Class Initialized
+INFO - 2019-04-24 17:27:43 --> Controller Class Initialized
+INFO - 2019-04-24 17:27:43 --> Helper loaded: form_helper
+INFO - 2019-04-24 17:27:43 --> Helper loaded: url_helper
+INFO - 2019-04-24 17:27:43 --> Helper loaded: viewutil_helper
+INFO - 2019-04-24 17:27:43 --> Session: Class initialized using 'files' driver.
+INFO - 2019-04-24 17:27:43 --> Database Driver Class Initialized
+INFO - 2019-04-24 17:27:43 --> Helper loaded: alert_helper
+INFO - 2019-04-24 17:27:43 --> File loaded: /home/testuser01/www/CI/application/views/auth/login_v.php
+INFO - 2019-04-24 17:27:43 --> Final output sent to browser
+DEBUG - 2019-04-24 17:27:43 --> Total execution time: 0.0046
+INFO - 2019-04-24 17:27:49 --> Config Class Initialized
+INFO - 2019-04-24 17:27:49 --> Hooks Class Initialized
+DEBUG - 2019-04-24 17:27:49 --> UTF-8 Support Enabled
+INFO - 2019-04-24 17:27:49 --> Utf8 Class Initialized
+INFO - 2019-04-24 17:27:49 --> URI Class Initialized
+INFO - 2019-04-24 17:27:49 --> Router Class Initialized
+INFO - 2019-04-24 17:27:49 --> Output Class Initialized
+INFO - 2019-04-24 17:27:49 --> Security Class Initialized
+DEBUG - 2019-04-24 17:27:49 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-04-24 17:27:49 --> Input Class Initialized
+INFO - 2019-04-24 17:27:49 --> Language Class Initialized
+INFO - 2019-04-24 17:27:49 --> Loader Class Initialized
+INFO - 2019-04-24 17:27:49 --> Controller Class Initialized
+INFO - 2019-04-24 17:27:49 --> Helper loaded: form_helper
+INFO - 2019-04-24 17:27:49 --> Helper loaded: url_helper
+INFO - 2019-04-24 17:27:49 --> Helper loaded: viewutil_helper
+INFO - 2019-04-24 17:27:49 --> Session: Class initialized using 'files' driver.
+INFO - 2019-04-24 17:27:49 --> Database Driver Class Initialized
+INFO - 2019-04-24 17:27:49 --> Model "Auth_m" initialized
+INFO - 2019-04-24 17:27:49 --> Helper loaded: alert_helper
+INFO - 2019-04-24 17:27:49 --> Form Validation Class Initialized
+INFO - 2019-04-24 17:27:49 --> Language file loaded: language/english/form_validation_lang.php
+INFO - 2019-04-24 17:27:49 --> Config Class Initialized
+INFO - 2019-04-24 17:27:49 --> Hooks Class Initialized
+DEBUG - 2019-04-24 17:27:49 --> UTF-8 Support Enabled
+INFO - 2019-04-24 17:27:49 --> Utf8 Class Initialized
+INFO - 2019-04-24 17:27:49 --> URI Class Initialized
+INFO - 2019-04-24 17:27:49 --> Router Class Initialized
+INFO - 2019-04-24 17:27:49 --> Output Class Initialized
+INFO - 2019-04-24 17:27:49 --> Security Class Initialized
+DEBUG - 2019-04-24 17:27:49 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-04-24 17:27:49 --> Input Class Initialized
+INFO - 2019-04-24 17:27:49 --> Language Class Initialized
+INFO - 2019-04-24 17:27:49 --> Loader Class Initialized
+INFO - 2019-04-24 17:27:49 --> Controller Class Initialized
+INFO - 2019-04-24 17:27:49 --> Helper loaded: form_helper
+INFO - 2019-04-24 17:27:49 --> Helper loaded: url_helper
+INFO - 2019-04-24 17:27:49 --> Helper loaded: viewutil_helper
+INFO - 2019-04-24 17:27:49 --> Session: Class initialized using 'files' driver.
+INFO - 2019-04-24 17:27:49 --> File loaded: /home/testuser01/www/CI/application/views/header_admin.php
+DEBUG - 2019-04-24 17:27:49 --> #### PWD : Temp/index() , WHO : a_admin - by shhong
+INFO - 2019-04-24 17:27:49 --> File loaded: /home/testuser01/www/CI/application/views/main_v.php
+INFO - 2019-04-24 17:27:49 --> File loaded: /home/testuser01/www/CI/application/views/footer_admin.php
+INFO - 2019-04-24 17:27:49 --> Final output sent to browser
+DEBUG - 2019-04-24 17:27:49 --> Total execution time: 0.0025
+INFO - 2019-04-24 17:27:51 --> Config Class Initialized
+INFO - 2019-04-24 17:27:51 --> Hooks Class Initialized
+DEBUG - 2019-04-24 17:27:51 --> UTF-8 Support Enabled
+INFO - 2019-04-24 17:27:51 --> Utf8 Class Initialized
+INFO - 2019-04-24 17:27:51 --> URI Class Initialized
+INFO - 2019-04-24 17:27:51 --> Router Class Initialized
+INFO - 2019-04-24 17:27:51 --> Output Class Initialized
+INFO - 2019-04-24 17:27:51 --> Security Class Initialized
+DEBUG - 2019-04-24 17:27:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-04-24 17:27:51 --> Input Class Initialized
+INFO - 2019-04-24 17:27:51 --> Language Class Initialized
+INFO - 2019-04-24 17:27:51 --> Loader Class Initialized
+INFO - 2019-04-24 17:27:51 --> Controller Class Initialized
+INFO - 2019-04-24 17:27:51 --> Helper loaded: form_helper
+INFO - 2019-04-24 17:27:51 --> Helper loaded: url_helper
+INFO - 2019-04-24 17:27:51 --> Helper loaded: viewutil_helper
+INFO - 2019-04-24 17:27:51 --> Session: Class initialized using 'files' driver.
+INFO - 2019-04-24 17:27:51 --> File loaded: /home/testuser01/www/CI/application/views/header_admin.php
+DEBUG - 2019-04-24 17:27:51 --> #### PWD : Problem_set/index() , WHO : a_admin - by shhong
+INFO - 2019-04-24 17:27:51 --> Database Driver Class Initialized
+INFO - 2019-04-24 17:27:51 --> Model "Problem_m" initialized
+INFO - 2019-04-24 17:27:51 --> File loaded: /home/testuser01/www/CI/application/views/leveltest/pro_group_list_v.php
+INFO - 2019-04-24 17:27:51 --> File loaded: /home/testuser01/www/CI/application/views/footer_admin.php
+INFO - 2019-04-24 17:27:51 --> Final output sent to browser
+DEBUG - 2019-04-24 17:27:51 --> Total execution time: 0.0059
+INFO - 2019-04-24 17:27:54 --> Config Class Initialized
+INFO - 2019-04-24 17:27:54 --> Hooks Class Initialized
+DEBUG - 2019-04-24 17:27:54 --> UTF-8 Support Enabled
+INFO - 2019-04-24 17:27:54 --> Utf8 Class Initialized
+INFO - 2019-04-24 17:27:54 --> URI Class Initialized
+INFO - 2019-04-24 17:27:54 --> Router Class Initialized
+INFO - 2019-04-24 17:27:54 --> Output Class Initialized
+INFO - 2019-04-24 17:27:54 --> Security Class Initialized
+DEBUG - 2019-04-24 17:27:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-04-24 17:27:54 --> Input Class Initialized
+INFO - 2019-04-24 17:27:54 --> Language Class Initialized
+INFO - 2019-04-24 17:27:54 --> Loader Class Initialized
+INFO - 2019-04-24 17:27:54 --> Controller Class Initialized
+INFO - 2019-04-24 17:27:54 --> Helper loaded: form_helper
+INFO - 2019-04-24 17:27:54 --> Helper loaded: url_helper
+INFO - 2019-04-24 17:27:54 --> Helper loaded: viewutil_helper
+INFO - 2019-04-24 17:27:54 --> Session: Class initialized using 'files' driver.
+INFO - 2019-04-24 17:27:54 --> Database Driver Class Initialized
+INFO - 2019-04-24 17:27:54 --> Model "Levellist_m" initialized
+INFO - 2019-04-24 17:27:54 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2019-04-24 17:27:54 --> Pagination Class Initialized
+INFO - 2019-04-24 17:27:54 --> File loaded: /home/testuser01/www/CI/application/views/header_admin.php
+DEBUG - 2019-04-24 17:27:54 --> #### PWD : Levellist/index() , WHO : a_admin - by shhong
+DEBUG - 2019-04-24 17:27:54 --> #### PWD : $searchtype : 0 - by shhong
+DEBUG - 2019-04-24 17:27:54 --> #### PWD : Levellist_m/searchtype_query  - by shhong
+DEBUG - 2019-04-24 17:27:54 --> #### PWD : Levellist_m/searchtype_query $wherequery :   - by shhong
+DEBUG - 2019-04-24 17:27:54 --> #### PWD : Levellist_m/search_record_count $sql : SELECT COUNT(*) As cnt FROM Tbl_customer_info WHERE c_idx LIKE '%%' - by shhong
+DEBUG - 2019-04-24 17:27:54 --> #### PWD : Levellist_m/searchtype_query  - by shhong
+DEBUG - 2019-04-24 17:27:54 --> #### PWD : Levellist_m/searchtype_query $wherequery :   - by shhong
+DEBUG - 2019-04-24 17:27:54 --> #### PWD : Levellist_m/get_list $sql : SELECT * FROM Tbl_customer_info WHERE c_idx LIKE '%%' ORDER BY c_idx desc   LIMIT 0, 10 - by shhong
+DEBUG - 2019-04-24 17:27:54 --> #### PWD : Levellist_m/get_temporary_list $sql :  select * from Tbl_level_temporary where increase between 1 and 5  order by increase desc   - by shhong
+DEBUG - 2019-04-24 17:27:54 --> #### PWD : Levellist_m/get_leveltest_group $sql : Select * from Tbl_pro_group order by group_v desc   - by shhong
+INFO - 2019-04-24 17:27:54 --> File loaded: /home/testuser01/www/CI/application/views/leveltest/lv_list_v.php
+INFO - 2019-04-24 17:27:54 --> File loaded: /home/testuser01/www/CI/application/views/footer_admin.php
+INFO - 2019-04-24 17:27:54 --> Final output sent to browser
+DEBUG - 2019-04-24 17:27:54 --> Total execution time: 0.0155
+INFO - 2019-04-24 17:27:57 --> Config Class Initialized
+INFO - 2019-04-24 17:27:57 --> Hooks Class Initialized
+DEBUG - 2019-04-24 17:27:57 --> UTF-8 Support Enabled
+INFO - 2019-04-24 17:27:57 --> Utf8 Class Initialized
+INFO - 2019-04-24 17:27:57 --> URI Class Initialized
+INFO - 2019-04-24 17:27:57 --> Router Class Initialized
+INFO - 2019-04-24 17:27:57 --> Output Class Initialized
+INFO - 2019-04-24 17:27:57 --> Security Class Initialized
+DEBUG - 2019-04-24 17:27:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-04-24 17:27:57 --> Input Class Initialized
+INFO - 2019-04-24 17:27:57 --> Language Class Initialized
+INFO - 2019-04-24 17:27:57 --> Loader Class Initialized
+INFO - 2019-04-24 17:27:57 --> Controller Class Initialized
+INFO - 2019-04-24 17:27:57 --> Helper loaded: form_helper
+INFO - 2019-04-24 17:27:57 --> Helper loaded: url_helper
+INFO - 2019-04-24 17:27:57 --> Helper loaded: viewutil_helper
+INFO - 2019-04-24 17:27:57 --> Session: Class initialized using 'files' driver.
+INFO - 2019-04-24 17:27:57 --> Database Driver Class Initialized
+INFO - 2019-04-24 17:27:57 --> Model "Levellist_m" initialized
+INFO - 2019-04-24 17:27:57 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2019-04-24 17:27:57 --> Pagination Class Initialized
+INFO - 2019-04-24 17:27:57 --> File loaded: /home/testuser01/www/CI/application/views/header_admin.php
+DEBUG - 2019-04-24 17:27:57 --> #### PWD : Levellist/index() , WHO : a_admin - by shhong
+DEBUG - 2019-04-24 17:27:57 --> #### PWD : $searchtype : 0 - by shhong
+DEBUG - 2019-04-24 17:27:57 --> #### PWD : Levellist_m/searchtype_query  - by shhong
+DEBUG - 2019-04-24 17:27:57 --> #### PWD : Levellist_m/searchtype_query $wherequery :   - by shhong
+DEBUG - 2019-04-24 17:27:57 --> #### PWD : Levellist_m/search_record_count $sql : SELECT COUNT(*) As cnt FROM Tbl_customer_info WHERE c_idx LIKE '%%' - by shhong
+DEBUG - 2019-04-24 17:27:57 --> #### PWD : Levellist_m/searchtype_query  - by shhong
+DEBUG - 2019-04-24 17:27:57 --> #### PWD : Levellist_m/searchtype_query $wherequery :   - by shhong
+DEBUG - 2019-04-24 17:27:57 --> #### PWD : Levellist_m/get_list $sql : SELECT * FROM Tbl_customer_info WHERE c_idx LIKE '%%' ORDER BY c_idx desc   LIMIT 30, 10 - by shhong
+DEBUG - 2019-04-24 17:27:57 --> #### PWD : Levellist_m/get_temporary_list $sql :  select * from Tbl_level_temporary where increase between 1 and 5  order by increase desc   - by shhong
+DEBUG - 2019-04-24 17:27:57 --> #### PWD : Levellist_m/get_leveltest_group $sql : Select * from Tbl_pro_group order by group_v desc   - by shhong
+INFO - 2019-04-24 17:27:57 --> File loaded: /home/testuser01/www/CI/application/views/leveltest/lv_list_v.php
+INFO - 2019-04-24 17:27:57 --> File loaded: /home/testuser01/www/CI/application/views/footer_admin.php
+INFO - 2019-04-24 17:27:57 --> Final output sent to browser
+DEBUG - 2019-04-24 17:27:57 --> Total execution time: 0.0212
+INFO - 2019-04-24 17:28:05 --> Config Class Initialized
+INFO - 2019-04-24 17:28:05 --> Hooks Class Initialized
+DEBUG - 2019-04-24 17:28:05 --> UTF-8 Support Enabled
+INFO - 2019-04-24 17:28:05 --> Utf8 Class Initialized
+INFO - 2019-04-24 17:28:05 --> URI Class Initialized
+INFO - 2019-04-24 17:28:05 --> Router Class Initialized
+INFO - 2019-04-24 17:28:05 --> Output Class Initialized
+INFO - 2019-04-24 17:28:05 --> Security Class Initialized
+DEBUG - 2019-04-24 17:28:05 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-04-24 17:28:05 --> Input Class Initialized
+INFO - 2019-04-24 17:28:05 --> Language Class Initialized
+INFO - 2019-04-24 17:28:05 --> Loader Class Initialized
+INFO - 2019-04-24 17:28:05 --> Controller Class Initialized
+INFO - 2019-04-24 17:28:05 --> Helper loaded: form_helper
+INFO - 2019-04-24 17:28:05 --> Helper loaded: url_helper
+INFO - 2019-04-24 17:28:05 --> Helper loaded: viewutil_helper
+INFO - 2019-04-24 17:28:05 --> Session: Class initialized using 'files' driver.
+INFO - 2019-04-24 17:28:05 --> Database Driver Class Initialized
+INFO - 2019-04-24 17:28:05 --> Model "Levellist_m" initialized
+INFO - 2019-04-24 17:28:05 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2019-04-24 17:28:05 --> Pagination Class Initialized
+INFO - 2019-04-24 17:28:05 --> File loaded: /home/testuser01/www/CI/application/views/header_admin.php
+DEBUG - 2019-04-24 17:28:05 --> #### PWD : Levellist/index() , WHO : a_admin - by shhong
+DEBUG - 2019-04-24 17:28:05 --> #### PWD : $searchtype : 0 - by shhong
+DEBUG - 2019-04-24 17:28:05 --> #### PWD : Levellist_m/searchtype_query  - by shhong
+DEBUG - 2019-04-24 17:28:05 --> #### PWD : Levellist_m/searchtype_query $wherequery :   - by shhong
+DEBUG - 2019-04-24 17:28:05 --> #### PWD : Levellist_m/search_record_count $sql : SELECT COUNT(*) As cnt FROM Tbl_customer_info WHERE c_idx LIKE '%%' - by shhong
+DEBUG - 2019-04-24 17:28:05 --> #### PWD : Levellist_m/searchtype_query  - by shhong
+DEBUG - 2019-04-24 17:28:05 --> #### PWD : Levellist_m/searchtype_query $wherequery :   - by shhong
+DEBUG - 2019-04-24 17:28:05 --> #### PWD : Levellist_m/get_list $sql : SELECT * FROM Tbl_customer_info WHERE c_idx LIKE '%%' ORDER BY c_idx desc   LIMIT 10, 10 - by shhong
+DEBUG - 2019-04-24 17:28:05 --> #### PWD : Levellist_m/get_temporary_list $sql :  select * from Tbl_level_temporary where increase between 1 and 5  order by increase desc   - by shhong
+DEBUG - 2019-04-24 17:28:05 --> #### PWD : Levellist_m/get_leveltest_group $sql : Select * from Tbl_pro_group order by group_v desc   - by shhong
+INFO - 2019-04-24 17:28:05 --> File loaded: /home/testuser01/www/CI/application/views/leveltest/lv_list_v.php
+INFO - 2019-04-24 17:28:05 --> File loaded: /home/testuser01/www/CI/application/views/footer_admin.php
+INFO - 2019-04-24 17:28:05 --> Final output sent to browser
+DEBUG - 2019-04-24 17:28:05 --> Total execution time: 0.0210
+INFO - 2019-04-24 17:28:06 --> Config Class Initialized
+INFO - 2019-04-24 17:28:06 --> Hooks Class Initialized
+DEBUG - 2019-04-24 17:28:06 --> UTF-8 Support Enabled
+INFO - 2019-04-24 17:28:06 --> Utf8 Class Initialized
+INFO - 2019-04-24 17:28:06 --> URI Class Initialized
+INFO - 2019-04-24 17:28:06 --> Router Class Initialized
+INFO - 2019-04-24 17:28:06 --> Output Class Initialized
+INFO - 2019-04-24 17:28:06 --> Security Class Initialized
+DEBUG - 2019-04-24 17:28:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-04-24 17:28:06 --> Input Class Initialized
+INFO - 2019-04-24 17:28:06 --> Language Class Initialized
+INFO - 2019-04-24 17:28:06 --> Loader Class Initialized
+INFO - 2019-04-24 17:28:06 --> Controller Class Initialized
+INFO - 2019-04-24 17:28:06 --> Helper loaded: form_helper
+INFO - 2019-04-24 17:28:06 --> Helper loaded: url_helper
+INFO - 2019-04-24 17:28:06 --> Helper loaded: viewutil_helper
+INFO - 2019-04-24 17:28:06 --> Session: Class initialized using 'files' driver.
+INFO - 2019-04-24 17:28:06 --> Database Driver Class Initialized
+INFO - 2019-04-24 17:28:06 --> Model "Levellist_m" initialized
+INFO - 2019-04-24 17:28:06 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2019-04-24 17:28:06 --> Pagination Class Initialized
+INFO - 2019-04-24 17:28:06 --> File loaded: /home/testuser01/www/CI/application/views/header_admin.php
+DEBUG - 2019-04-24 17:28:06 --> #### PWD : Levellist/index() , WHO : a_admin - by shhong
+DEBUG - 2019-04-24 17:28:06 --> #### PWD : $searchtype : 0 - by shhong
+DEBUG - 2019-04-24 17:28:06 --> #### PWD : Levellist_m/searchtype_query  - by shhong
+DEBUG - 2019-04-24 17:28:06 --> #### PWD : Levellist_m/searchtype_query $wherequery :   - by shhong
+DEBUG - 2019-04-24 17:28:06 --> #### PWD : Levellist_m/search_record_count $sql : SELECT COUNT(*) As cnt FROM Tbl_customer_info WHERE c_idx LIKE '%%' - by shhong
+DEBUG - 2019-04-24 17:28:06 --> #### PWD : Levellist_m/searchtype_query  - by shhong
+DEBUG - 2019-04-24 17:28:06 --> #### PWD : Levellist_m/searchtype_query $wherequery :   - by shhong
+DEBUG - 2019-04-24 17:28:06 --> #### PWD : Levellist_m/get_list $sql : SELECT * FROM Tbl_customer_info WHERE c_idx LIKE '%%' ORDER BY c_idx desc   LIMIT 20, 10 - by shhong
+DEBUG - 2019-04-24 17:28:06 --> #### PWD : Levellist_m/get_temporary_list $sql :  select * from Tbl_level_temporary where increase between 1 and 5  order by increase desc   - by shhong
+DEBUG - 2019-04-24 17:28:06 --> #### PWD : Levellist_m/get_leveltest_group $sql : Select * from Tbl_pro_group order by group_v desc   - by shhong
+INFO - 2019-04-24 17:28:06 --> File loaded: /home/testuser01/www/CI/application/views/leveltest/lv_list_v.php
+INFO - 2019-04-24 17:28:06 --> File loaded: /home/testuser01/www/CI/application/views/footer_admin.php
+INFO - 2019-04-24 17:28:06 --> Final output sent to browser
+DEBUG - 2019-04-24 17:28:06 --> Total execution time: 0.0180
+INFO - 2019-04-24 17:28:08 --> Config Class Initialized
+INFO - 2019-04-24 17:28:08 --> Hooks Class Initialized
+DEBUG - 2019-04-24 17:28:08 --> UTF-8 Support Enabled
+INFO - 2019-04-24 17:28:08 --> Utf8 Class Initialized
+INFO - 2019-04-24 17:28:08 --> URI Class Initialized
+INFO - 2019-04-24 17:28:08 --> Router Class Initialized
+INFO - 2019-04-24 17:28:08 --> Output Class Initialized
+INFO - 2019-04-24 17:28:08 --> Security Class Initialized
+DEBUG - 2019-04-24 17:28:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-04-24 17:28:08 --> Input Class Initialized
+INFO - 2019-04-24 17:28:08 --> Language Class Initialized
+INFO - 2019-04-24 17:28:08 --> Loader Class Initialized
+INFO - 2019-04-24 17:28:08 --> Controller Class Initialized
+INFO - 2019-04-24 17:28:08 --> Helper loaded: form_helper
+INFO - 2019-04-24 17:28:08 --> Helper loaded: url_helper
+INFO - 2019-04-24 17:28:08 --> Helper loaded: viewutil_helper
+INFO - 2019-04-24 17:28:08 --> Session: Class initialized using 'files' driver.
+INFO - 2019-04-24 17:28:08 --> Database Driver Class Initialized
+INFO - 2019-04-24 17:28:08 --> Model "Levellist_m" initialized
+INFO - 2019-04-24 17:28:08 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2019-04-24 17:28:08 --> Pagination Class Initialized
+INFO - 2019-04-24 17:28:08 --> File loaded: /home/testuser01/www/CI/application/views/header_admin.php
+DEBUG - 2019-04-24 17:28:08 --> #### PWD : Levellist/index() , WHO : a_admin - by shhong
+DEBUG - 2019-04-24 17:28:08 --> #### PWD : $searchtype : 0 - by shhong
+DEBUG - 2019-04-24 17:28:08 --> #### PWD : Levellist_m/searchtype_query  - by shhong
+DEBUG - 2019-04-24 17:28:08 --> #### PWD : Levellist_m/searchtype_query $wherequery :   - by shhong
+DEBUG - 2019-04-24 17:28:08 --> #### PWD : Levellist_m/search_record_count $sql : SELECT COUNT(*) As cnt FROM Tbl_customer_info WHERE c_idx LIKE '%%' - by shhong
+DEBUG - 2019-04-24 17:28:08 --> #### PWD : Levellist_m/searchtype_query  - by shhong
+DEBUG - 2019-04-24 17:28:08 --> #### PWD : Levellist_m/searchtype_query $wherequery :   - by shhong
+DEBUG - 2019-04-24 17:28:08 --> #### PWD : Levellist_m/get_list $sql : SELECT * FROM Tbl_customer_info WHERE c_idx LIKE '%%' ORDER BY c_idx desc   LIMIT 0, 10 - by shhong
+DEBUG - 2019-04-24 17:28:08 --> #### PWD : Levellist_m/get_temporary_list $sql :  select * from Tbl_level_temporary where increase between 1 and 5  order by increase desc   - by shhong
+DEBUG - 2019-04-24 17:28:08 --> #### PWD : Levellist_m/get_leveltest_group $sql : Select * from Tbl_pro_group order by group_v desc   - by shhong
+INFO - 2019-04-24 17:28:08 --> File loaded: /home/testuser01/www/CI/application/views/leveltest/lv_list_v.php
+INFO - 2019-04-24 17:28:08 --> File loaded: /home/testuser01/www/CI/application/views/footer_admin.php
+INFO - 2019-04-24 17:28:08 --> Final output sent to browser
+DEBUG - 2019-04-24 17:28:08 --> Total execution time: 0.0192
+INFO - 2019-04-24 17:28:17 --> Config Class Initialized
+INFO - 2019-04-24 17:28:17 --> Hooks Class Initialized
+DEBUG - 2019-04-24 17:28:17 --> UTF-8 Support Enabled
+INFO - 2019-04-24 17:28:17 --> Utf8 Class Initialized
+INFO - 2019-04-24 17:28:17 --> URI Class Initialized
+INFO - 2019-04-24 17:28:17 --> Router Class Initialized
+INFO - 2019-04-24 17:28:17 --> Output Class Initialized
+INFO - 2019-04-24 17:28:17 --> Security Class Initialized
+DEBUG - 2019-04-24 17:28:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-04-24 17:28:17 --> Input Class Initialized
+INFO - 2019-04-24 17:28:17 --> Language Class Initialized
+INFO - 2019-04-24 17:28:17 --> Loader Class Initialized
+INFO - 2019-04-24 17:28:17 --> Controller Class Initialized
+INFO - 2019-04-24 17:28:17 --> Helper loaded: form_helper
+INFO - 2019-04-24 17:28:17 --> Helper loaded: url_helper
+INFO - 2019-04-24 17:28:17 --> Helper loaded: viewutil_helper
+INFO - 2019-04-24 17:28:17 --> Session: Class initialized using 'files' driver.
+INFO - 2019-04-24 17:28:17 --> Database Driver Class Initialized
+INFO - 2019-04-24 17:28:17 --> Model "Levellist_m" initialized
+INFO - 2019-04-24 17:28:17 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2019-04-24 17:28:17 --> Pagination Class Initialized
+INFO - 2019-04-24 17:28:17 --> File loaded: /home/testuser01/www/CI/application/views/header_admin.php
+DEBUG - 2019-04-24 17:28:17 --> #### PWD : Levellist/index() , WHO : a_admin - by shhong
+DEBUG - 2019-04-24 17:28:17 --> #### PWD : $searchtype : 0 - by shhong
+DEBUG - 2019-04-24 17:28:17 --> #### PWD : Levellist_m/searchtype_query  - by shhong
+DEBUG - 2019-04-24 17:28:17 --> #### PWD : Levellist_m/searchtype_query $wherequery :  and mphone like '%10-1111-1111%'   - by shhong
+DEBUG - 2019-04-24 17:28:17 --> #### PWD : Levellist_m/search_record_count $sql : SELECT COUNT(*) As cnt FROM Tbl_customer_info WHERE c_idx LIKE '%%' and mphone like '%10-1111-1111%'  - by shhong
+DEBUG - 2019-04-24 17:28:17 --> #### PWD : Levellist_m/searchtype_query  - by shhong
+DEBUG - 2019-04-24 17:28:17 --> #### PWD : Levellist_m/searchtype_query $wherequery :  and mphone like '%10-1111-1111%'   - by shhong
+DEBUG - 2019-04-24 17:28:17 --> #### PWD : Levellist_m/get_list $sql : SELECT * FROM Tbl_customer_info WHERE c_idx LIKE '%%' and mphone like '%10-1111-1111%'  ORDER BY c_idx desc   LIMIT 0, 10 - by shhong
+DEBUG - 2019-04-24 17:28:17 --> #### PWD : Levellist_m/get_temporary_list $sql :  select * from Tbl_level_temporary where increase between 1 and 5  order by increase desc   - by shhong
+DEBUG - 2019-04-24 17:28:17 --> #### PWD : Levellist_m/get_leveltest_group $sql : Select * from Tbl_pro_group order by group_v desc   - by shhong
+INFO - 2019-04-24 17:28:17 --> File loaded: /home/testuser01/www/CI/application/views/leveltest/lv_list_v.php
+INFO - 2019-04-24 17:28:17 --> File loaded: /home/testuser01/www/CI/application/views/footer_admin.php
+INFO - 2019-04-24 17:28:17 --> Final output sent to browser
+DEBUG - 2019-04-24 17:28:17 --> Total execution time: 0.0221
+INFO - 2019-04-24 18:02:46 --> Config Class Initialized
+INFO - 2019-04-24 18:02:46 --> Hooks Class Initialized
+DEBUG - 2019-04-24 18:02:46 --> UTF-8 Support Enabled
+INFO - 2019-04-24 18:02:46 --> Utf8 Class Initialized
+INFO - 2019-04-24 18:02:46 --> URI Class Initialized
+INFO - 2019-04-24 18:02:46 --> Router Class Initialized
+INFO - 2019-04-24 18:02:46 --> Output Class Initialized
+INFO - 2019-04-24 18:02:46 --> Security Class Initialized
+DEBUG - 2019-04-24 18:02:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2019-04-24 18:02:46 --> Input Class Initialized
+INFO - 2019-04-24 18:02:46 --> Language Class Initialized
+INFO - 2019-04-24 18:02:46 --> Loader Class Initialized
+INFO - 2019-04-24 18:02:46 --> Controller Class Initialized
+INFO - 2019-04-24 18:02:46 --> Helper loaded: form_helper
+INFO - 2019-04-24 18:02:46 --> Helper loaded: url_helper
+INFO - 2019-04-24 18:02:46 --> Helper loaded: viewutil_helper
+INFO - 2019-04-24 18:02:46 --> Session: Class initialized using 'files' driver.
+INFO - 2019-04-24 18:02:46 --> Database Driver Class Initialized
+INFO - 2019-04-24 18:02:46 --> Model "Levellist_m" initialized
+INFO - 2019-04-24 18:02:46 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2019-04-24 18:02:46 --> Pagination Class Initialized
+INFO - 2019-04-24 18:02:46 --> File loaded: /home/testuser01/www/CI/application/views/header_admin.php
+DEBUG - 2019-04-24 18:02:46 --> #### PWD : Levellist/index() , WHO : a_admin - by shhong
+DEBUG - 2019-04-24 18:02:46 --> #### PWD : $searchtype : 0 - by shhong
+DEBUG - 2019-04-24 18:02:46 --> #### PWD : Levellist_m/searchtype_query  - by shhong
+DEBUG - 2019-04-24 18:02:46 --> #### PWD : Levellist_m/searchtype_query $wherequery :   - by shhong
+DEBUG - 2019-04-24 18:02:46 --> #### PWD : Levellist_m/search_record_count $sql : SELECT COUNT(*) As cnt FROM Tbl_customer_info WHERE c_idx LIKE '%%' - by shhong
+DEBUG - 2019-04-24 18:02:46 --> #### PWD : Levellist_m/searchtype_query  - by shhong
+DEBUG - 2019-04-24 18:02:46 --> #### PWD : Levellist_m/searchtype_query $wherequery :   - by shhong
+DEBUG - 2019-04-24 18:02:46 --> #### PWD : Levellist_m/get_list $sql : SELECT * FROM Tbl_customer_info WHERE c_idx LIKE '%%' ORDER BY c_idx desc   LIMIT 0, 10 - by shhong
+DEBUG - 2019-04-24 18:02:46 --> #### PWD : Levellist_m/get_temporary_list $sql :  select * from Tbl_level_temporary where increase between 1 and 5  order by increase desc   - by shhong
+DEBUG - 2019-04-24 18:02:46 --> #### PWD : Levellist_m/get_leveltest_group $sql : Select * from Tbl_pro_group order by group_v desc   - by shhong
+INFO - 2019-04-24 18:02:46 --> File loaded: /home/testuser01/www/CI/application/views/leveltest/lv_list_v.php
+INFO - 2019-04-24 18:02:46 --> File loaded: /home/testuser01/www/CI/application/views/footer_admin.php
+INFO - 2019-04-24 18:02:46 --> Final output sent to browser
+DEBUG - 2019-04-24 18:02:46 --> Total execution time: 0.0196
